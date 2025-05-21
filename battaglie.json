@@ -1,0 +1,814 @@
+[
+  {
+    "id": 192577520,
+    "gilde": [
+      {
+        "nome": "Yum Yum",
+        "players": 10,
+        "ally": "FPV",
+        "kills": 1,
+        "deaths": 8
+      },
+      {
+        "nome": "Grudgebringers",
+        "players": 15,
+        "ally": "FAR",
+        "kills": 9,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Grudgebringers",
+    "ratti": 1
+  },
+  {
+    "id": 192573917,
+    "gilde": [
+      {
+        "nome": "Yum Yum",
+        "players": 10,
+        "ally": "FPV",
+        "kills": 4,
+        "deaths": 10
+      },
+      {
+        "nome": "Grudgebringers",
+        "players": 15,
+        "ally": "FAR",
+        "kills": 12,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "Grudgebringers",
+    "ratti": 3
+  },
+  {
+    "id": 192571348,
+    "gilde": [
+      {
+        "nome": "Neck Breakers",
+        "players": 11,
+        "ally": "NBK",
+        "kills": 1,
+        "deaths": 7
+      },
+      {
+        "nome": "Swords Drawn",
+        "players": 17,
+        "ally": "WP",
+        "kills": 2,
+        "deaths": 0
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 10,
+        "ally": "NoAlliance",
+        "kills": 3,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "ThunderCIap",
+    "ratti": 5
+  },
+  {
+    "id": 192570355,
+    "gilde": [
+      {
+        "nome": "hehehaha",
+        "players": 15,
+        "ally": "NoAlliance",
+        "kills": 13,
+        "deaths": 0
+      },
+      {
+        "nome": "Torgnoles et Grabuge",
+        "players": 11,
+        "ally": "M00N",
+        "kills": 0,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "hehehaha",
+    "ratti": 11
+  },
+  {
+    "id": 192569988,
+    "gilde": [
+      {
+        "nome": "Yum Yum",
+        "players": 10,
+        "ally": "FPV",
+        "kills": 8,
+        "deaths": 2
+      },
+      {
+        "nome": "Grudgebringers",
+        "players": 14,
+        "ally": "FAR",
+        "kills": 7,
+        "deaths": 7
+      }
+    ],
+    "vincitore": "Yum Yum",
+    "ratti": 6
+  },
+  {
+    "id": 192569438,
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 13,
+        "ally": "SWAP",
+        "kills": 1,
+        "deaths": 6
+      },
+      {
+        "nome": "Solea",
+        "players": 19,
+        "ally": "POST",
+        "kills": 8,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Solea",
+    "ratti": 10
+  },
+  {
+    "id": 192567364,
+    "gilde": [
+      {
+        "nome": "Yum Yum",
+        "players": 10,
+        "ally": "FPV",
+        "kills": 3,
+        "deaths": 8
+      },
+      {
+        "nome": "Grudgebringers",
+        "players": 13,
+        "ally": "FAR",
+        "kills": 4,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Grudgebringers",
+    "ratti": 8
+  },
+  {
+    "id": 192559582,
+    "gilde": [
+      {
+        "nome": "Dementia",
+        "players": 17,
+        "ally": "FOU",
+        "kills": 1,
+        "deaths": 8
+      },
+      {
+        "nome": "Solea",
+        "players": 18,
+        "ally": "POST",
+        "kills": 9,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Solea",
+    "ratti": 2
+  },
+  {
+    "id": 192559428,
+    "gilde": [
+      {
+        "nome": "VINICIIII",
+        "players": 11,
+        "ally": "RUNMF",
+        "kills": 0,
+        "deaths": 11
+      },
+      {
+        "nome": "C I N G H I A L E",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 11,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "C I N G H I A L E",
+    "ratti": 3
+  },
+  {
+    "id": 192556288,
+    "gilde": [
+      {
+        "nome": "NURMENGARD",
+        "players": 11,
+        "ally": "VLR",
+        "kills": 1,
+        "deaths": 0
+      },
+      {
+        "nome": "W R A I T H",
+        "players": 23,
+        "ally": "ISSUE",
+        "kills": 7,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "W R A I T H",
+    "ratti": 9
+  },
+  {
+    "id": 192555763,
+    "gilde": [
+      {
+        "nome": "Solea",
+        "players": 19,
+        "ally": "POST",
+        "kills": 6,
+        "deaths": 3
+      },
+      {
+        "nome": "NO META",
+        "players": 13,
+        "ally": "SWAP",
+        "kills": 2,
+        "deaths": 0
+      },
+      {
+        "nome": "Dementia",
+        "players": 18,
+        "ally": "FOU",
+        "kills": 1,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "Solea",
+    "ratti": 8
+  },
+  {
+    "id": 192551275,
+    "gilde": [
+      {
+        "nome": "cocorrico",
+        "players": 10,
+        "ally": "NoAlliance",
+        "kills": 0,
+        "deaths": 10
+      },
+      {
+        "nome": "Telecinco",
+        "players": 15,
+        "ally": "R3D",
+        "kills": 9,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Telecinco",
+    "ratti": 1
+  },
+  {
+    "id": 192548860,
+    "gilde": [
+      {
+        "nome": "Alcyon",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 4,
+        "deaths": 7
+      },
+      {
+        "nome": "Il Covo",
+        "players": 24,
+        "ally": "RELAX",
+        "kills": 7,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "Il Covo",
+    "ratti": 1
+  },
+  {
+    "id": 192545890,
+    "gilde": [
+      {
+        "nome": "Wild Instinct",
+        "players": 10,
+        "ally": "URSS",
+        "kills": 2,
+        "deaths": 4
+      },
+      {
+        "nome": "No Skills",
+        "players": 22,
+        "ally": "NGU",
+        "kills": 5,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "No Skills",
+    "ratti": 1
+  },
+  {
+    "id": 192544429,
+    "gilde": [
+      {
+        "nome": "Swords Drawn",
+        "players": 18,
+        "ally": "WP",
+        "kills": 4,
+        "deaths": 2
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 5,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ThunderCIap",
+    "ratti": 11
+  },
+  {
+    "id": 192543261,
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 12,
+        "ally": "SWAP",
+        "kills": 6,
+        "deaths": 0
+      },
+      {
+        "nome": "xHIJOS DEL CAOSx",
+        "players": 10,
+        "ally": "SNW",
+        "kills": 2,
+        "deaths": 6
+      }
+    ],
+    "vincitore": "NO META",
+    "ratti": 17
+  },
+  {
+    "id": 192541404,
+    "gilde": [
+      {
+        "nome": "Swords Drawn",
+        "players": 19,
+        "ally": "WP",
+        "kills": 4,
+        "deaths": 8
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 8,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ThunderCIap",
+    "ratti": 10
+  },
+  {
+    "id": 192539091,
+    "gilde": [
+      {
+        "nome": "ROLAYZ",
+        "players": 10,
+        "ally": "NoAlliance",
+        "kills": 0,
+        "deaths": 10
+      },
+      {
+        "nome": "ORIGAMI",
+        "players": 12,
+        "ally": "NoAlliance",
+        "kills": 7,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ORIGAMI",
+    "ratti": 3
+  },
+  {
+    "id": 192534893,
+    "gilde": [
+      {
+        "nome": "Swords Drawn",
+        "players": 10,
+        "ally": "WP",
+        "kills": 0,
+        "deaths": 10
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 11,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ThunderCIap",
+    "ratti": 8
+  },
+  {
+    "id": 192533145,
+    "gilde": [
+      {
+        "nome": "Swords Drawn",
+        "players": 19,
+        "ally": "WP",
+        "kills": 5,
+        "deaths": 0
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 10,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Swords Drawn",
+    "ratti": 11
+  },
+  {
+    "id": 192532713,
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 12,
+        "ally": "SWAP",
+        "kills": 7,
+        "deaths": 1
+      },
+      {
+        "nome": "UK FAMILIA",
+        "players": 17,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 9
+      }
+    ],
+    "vincitore": "NO META",
+    "ratti": 10
+  },
+  {
+    "id": 192532371,
+    "gilde": [
+      {
+        "nome": "Il Covo",
+        "players": 15,
+        "ally": "RELAX",
+        "kills": 8,
+        "deaths": 0
+      },
+      {
+        "nome": "VINICIIII",
+        "players": 10,
+        "ally": "RUNMF",
+        "kills": 0,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "Il Covo",
+    "ratti": 3
+  },
+  {
+    "id": 192524398,
+    "gilde": [
+      {
+        "nome": "Gallia Rebellis",
+        "players": 12,
+        "ally": "NoAlliance",
+        "kills": 10,
+        "deaths": 1
+      },
+      {
+        "nome": "RiotHub",
+        "players": 12,
+        "ally": "ROOT",
+        "kills": 1,
+        "deaths": 8
+      }
+    ],
+    "vincitore": "Gallia Rebellis",
+    "ratti": 2
+  },
+  {
+    "id": 192524132,
+    "gilde": [
+      {
+        "nome": "one4all",
+        "players": 14,
+        "ally": "Owned",
+        "kills": 10,
+        "deaths": 1
+      },
+      {
+        "nome": "E M 3 R Y C I",
+        "players": 11,
+        "ally": "KURVY",
+        "kills": 1,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "one4all",
+    "ratti": 0
+  },
+  {
+    "id": 192523709,
+    "gilde": [
+      {
+        "nome": "VINICIIII",
+        "players": 14,
+        "ally": "RUNMF",
+        "kills": 9,
+        "deaths": 0
+      },
+      {
+        "nome": "Il Covo",
+        "players": 10,
+        "ally": "RELAX",
+        "kills": 1,
+        "deaths": 9
+      }
+    ],
+    "vincitore": "VINICIIII",
+    "ratti": 12
+  },
+  {
+    "id": 192519583,
+    "gilde": [
+      {
+        "nome": "FR DREAM ACADEMY FR",
+        "players": 18,
+        "ally": "URSS",
+        "kills": 6,
+        "deaths": 1
+      },
+      {
+        "nome": "Gallia Rebellis",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 5
+      }
+    ],
+    "vincitore": "FR DREAM ACADEMY FR",
+    "ratti": 10
+  },
+  {
+    "id": 192514060,
+    "gilde": [
+      {
+        "nome": "Os Viriatos",
+        "players": 17,
+        "ally": "EQMS",
+        "kills": 6,
+        "deaths": 1
+      },
+      {
+        "nome": "ESSENCE",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 4
+      }
+    ],
+    "vincitore": "Os Viriatos",
+    "ratti": 2
+  },
+  {
+    "id": 192512349,
+    "gilde": [
+      {
+        "nome": "A R E T E",
+        "players": 16,
+        "ally": "GGLS",
+        "kills": 1,
+        "deaths": 7
+      },
+      {
+        "nome": "Destiny",
+        "players": 19,
+        "ally": "R3D",
+        "kills": 7,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Destiny",
+    "ratti": 0
+  },
+  {
+    "id": 192512042,
+    "gilde": [
+      {
+        "nome": "VALORBORNE",
+        "players": 12,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 5
+      },
+      {
+        "nome": "Il Covo",
+        "players": 12,
+        "ally": "RELAX",
+        "kills": 4,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Il Covo",
+    "ratti": 2
+  },
+  {
+    "id": 192507830,
+    "gilde": [
+      {
+        "nome": "Os Viriatos",
+        "players": 16,
+        "ally": "EQMS",
+        "kills": 5,
+        "deaths": 1
+      },
+      {
+        "nome": "ESSENCE",
+        "players": 20,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 5
+      }
+    ],
+    "vincitore": "Os Viriatos",
+    "ratti": 0
+  },
+  {
+    "id": 192504804,
+    "gilde": [
+      {
+        "nome": "Ruthless Reign",
+        "players": 18,
+        "ally": "NoAlliance",
+        "kills": 15,
+        "deaths": 4
+      },
+      {
+        "nome": "Faith And Steel",
+        "players": 20,
+        "ally": "FwB",
+        "kills": 4,
+        "deaths": 19
+      }
+    ],
+    "vincitore": "Ruthless Reign",
+    "ratti": 2
+  },
+  {
+    "id": 192500619,
+    "gilde": [
+      {
+        "nome": "Dementia",
+        "players": 20,
+        "ally": "FOU",
+        "kills": 5,
+        "deaths": 1
+      },
+      {
+        "nome": "No Hands",
+        "players": 20,
+        "ally": "Sorry",
+        "kills": 1,
+        "deaths": 5
+      }
+    ],
+    "vincitore": "Dementia",
+    "ratti": 0
+  },
+  {
+    "id": 192500376,
+    "gilde": [
+      {
+        "nome": "Il Covo",
+        "players": 12,
+        "ally": "RELAX",
+        "kills": 4,
+        "deaths": 1
+      },
+      {
+        "nome": "VALORBORNE",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "Il Covo",
+    "ratti": 2
+  },
+  {
+    "id": 192499966,
+    "gilde": [
+      {
+        "nome": "Os Viriatos",
+        "players": 15,
+        "ally": "EQMS",
+        "kills": 6,
+        "deaths": 6
+      },
+      {
+        "nome": "Ruthless Reign",
+        "players": 18,
+        "ally": "NoAlliance",
+        "kills": 6,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Os Viriatos",
+    "ratti": 10
+  },
+  {
+    "id": 192499475,
+    "gilde": [
+      {
+        "nome": "Born To Kill",
+        "players": 14,
+        "ally": "GGLS",
+        "kills": 1,
+        "deaths": 3
+      },
+      {
+        "nome": "Faith And Steel",
+        "players": 20,
+        "ally": "FwB",
+        "kills": 3,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Faith And Steel",
+    "ratti": 0
+  },
+  {
+    "id": 192496517,
+    "gilde": [
+      {
+        "nome": "FAKE ENGAGE",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 6
+      },
+      {
+        "nome": "Latwo Poszlo",
+        "players": 20,
+        "ally": "DB",
+        "kills": 6,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Latwo Poszlo",
+    "ratti": 0
+  },
+  {
+    "id": 192495935,
+    "gilde": [
+      {
+        "nome": "Just_a_Brawl",
+        "players": 14,
+        "ally": "noHH",
+        "kills": 16,
+        "deaths": 4
+      },
+      {
+        "nome": "VORAGO",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 5,
+        "deaths": 17
+      }
+    ],
+    "vincitore": "Just_a_Brawl",
+    "ratti": 4
+  },
+  {
+    "id": 192494815,
+    "gilde": [
+      {
+        "nome": "A R E T E",
+        "players": 24,
+        "ally": "GGLS",
+        "kills": 12,
+        "deaths": 8
+      },
+      {
+        "nome": "Destiny",
+        "players": 23,
+        "ally": "R3D",
+        "kills": 16,
+        "deaths": 8
+      }
+    ],
+    "vincitore": "Destiny",
+    "ratti": 10
+  }
+]

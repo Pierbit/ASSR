@@ -1,0 +1,141 @@
+// server.js
+import express from 'express';
+import cors from 'cors';
+import fetch from 'node-fetch';
+import fs from 'fs';
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+app.use(cors());
+
+const FILE_PATH1 = './battles.json';
+const FILE_PATH2 = './battaglie.json';
+
+async function fetchBattles() {
+    console.log("Fetching battles...");
+    let collected = [];
+    let offset = 0;
+    const limit = 51;
+    let stop = false;
+
+    while(offset < 3000) {
+        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(`FETCH URL: ${url}`);
+            console.log(`Status: ${res.status}`);
+
+            for (const battle of data) {
+                const date = new Date(battle.startTime);
+                const hour = date.getUTCHours();
+
+                if (hour >= 19 && hour <= 21) {
+                    const totalPlayers = Object.keys(battle.players).length;
+                    if (totalPlayers >= 25 && totalPlayers <= 60) {
+                        collected.push(battle);
+                    }
+                }
+            }
+
+        } catch (err) {
+            console.error("Errore durante il fetch:", err);
+        }
+        offset+=limit;
+        console.log("offset: "+offset);
+    }
+
+    const battaglie = collected
+        .map(battle => {
+            const guildMap = {}; // { guildName: { count, alliance } }
+
+            // Conta i player per gilda, e salva anche l'alleanza
+            Object.values(battle.players).forEach(player => {
+                const guild = player.guildName || 'NoGuild';
+                const kills = player.kills || 0;
+                const deaths = player.deaths || 0;
+                const alliance = player.allianceName || 'NoAlliance';
+
+                if (!guildMap[guild]) {
+                    guildMap[guild] = { count: 0, alliance, kills: 0, deaths: 0 };
+                }
+                guildMap[guild].kills += kills;
+                guildMap[guild].deaths += deaths;
+                guildMap[guild].count++;
+            });
+
+            // Prendi solo le gilde con almeno 10 player
+            const significantGuilds = Object.entries(guildMap)
+                .filter(([_, data]) => data.count >= 10);
+
+            if (significantGuilds.length < 2) return null;
+
+            // Raggruppa i player delle gilde significative per alleanza
+            const allianceCounts = {};
+
+            significantGuilds.forEach(([_, data]) => {
+                const alliance = data.alliance || 'NoAlliance';
+                allianceCounts[alliance] = (allianceCounts[alliance] || 0) + data.count;
+            });
+
+            // Se una singola alleanza ha ≥25 player tra le gilde principali → SCARTA
+            const dominantAlly = Object.values(allianceCounts).some(count => count >= 25);
+            if (dominantAlly) return null;
+
+            //Prendi tutte le gilde secondarie e contane i players totali
+            const secondaryGuilds = Object.entries(guildMap)
+                .filter(([_, data]) => data.count < 10);
+            let participantsCount = 0;
+            for(let i = 0; i < secondaryGuilds.length; i++) {
+                participantsCount+=secondaryGuilds[i][1].count;
+            }
+
+            // Calcola la gilda vincente (tra quelle significative)
+            let winner = null;
+            let maxKills = -1;
+            for (const [name, data] of significantGuilds) {
+                if (data.kills > maxKills) {
+                    maxKills = data.kills;
+                    winner = name;
+                }
+            }
+
+            // Se passa i filtri, costruisci l'oggetto finale
+            return {
+                id: battle.id,
+                gilde: significantGuilds.map(([name, data]) => ({
+                    nome: name,
+                    players: data.count,
+                    ally: data.alliance,
+                    kills: data.kills,
+                    deaths: data.deaths
+                })),
+                vincitore: winner,
+                ratti: participantsCount,
+            };
+        })
+        .filter(battle => battle !== null);
+
+    fs.writeFileSync(FILE_PATH1, JSON.stringify(collected, null, 2));
+    fs.writeFileSync(FILE_PATH2, JSON.stringify(battaglie, null, 2));
+    console.log(`Salvate ${collected.length} battaglie`);
+}
+
+// aggiorna ogni 10 minuti
+setInterval(fetchBattles, 28800000);
+fetchBattles(); // fetch iniziale
+
+// endpoint per leggere le battaglie
+app.get('/api/battles', (req, res) => {
+    if (fs.existsSync(FILE_PATH2)) {
+        const raw = fs.readFileSync(FILE_PATH2);
+        res.json(JSON.parse(raw));
+    } else {
+        res.status(404).json({error: "Battles not found"});
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Albion proxy server in ascolto su http://localhost:${PORT}`);
+});
