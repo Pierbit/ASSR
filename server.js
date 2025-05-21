@@ -48,9 +48,8 @@ async function fetchBattles() {
 
     const battaglie = collected
         .map(battle => {
-            const guildMap = {}; // { guildName: { count, alliance } }
+            const guildMap = {};
 
-            // Conta i player per gilda, e salva anche l'alleanza
             Object.values(battle.players).forEach(player => {
                 const guild = player.guildName || 'NoGuild';
                 const kills = player.kills || 0;
@@ -104,6 +103,7 @@ async function fetchBattles() {
             // Se passa i filtri, costruisci l'oggetto finale
             return {
                 id: battle.id,
+                data: battle.endTime,
                 gilde: significantGuilds.map(([name, data]) => ({
                     nome: name,
                     players: data.count,
