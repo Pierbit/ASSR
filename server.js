@@ -124,10 +124,9 @@ async function fetchBattles() {
 
     try{
         const result = await readLast14DailyBattleJson();
-        console.log("risultati "+result);
+        console.log(result);
         const output = {};
         for(let battle of result) {
-            console.log("battaglia "+battle);
             for(let gilda of battle.gilde){
                 const key = gilda.nome;
                 if(!output[key]){
