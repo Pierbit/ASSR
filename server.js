@@ -137,11 +137,12 @@ setInterval(fetchBattles, 28800000);
 fetchBattles(); // fetch iniziale
 
 // endpoint per leggere le battaglie
-app.get('/api/battles', (req, res) => {
-    if (fs.existsSync(FILE_PATH2)) {
-        const raw = fs.readFileSync(FILE_PATH2);
-        res.json(JSON.parse(raw));
-    } else {
+app.get('/api/battles', async (req, res) => {
+    try{
+        const raw = await readDailyBattleJson();
+        res.json(raw);
+    }catch (err){
+        console.log(err);
         res.status(404).json({error: "Battles not found"});
     }
 });
@@ -152,4 +153,8 @@ app.listen(PORT, () => {
 
 async function insertDailyBattleJson(collected) {
     await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
+}
+
+async function readDailyBattleJson() {
+    const result = await pool.query('SELECT * FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
 }
