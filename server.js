@@ -140,6 +140,7 @@ fetchBattles(); // fetch iniziale
 app.get('/api/battles', async (req, res) => {
     try{
         const raw = await readDailyBattleJson();
+        console.log(raw);
         res.json(raw);
     }catch (err){
         console.log(err);
@@ -156,5 +157,5 @@ async function insertDailyBattleJson(collected) {
 }
 
 async function readDailyBattleJson() {
-    const result = await pool.query('SELECT * FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
+    const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
 }
