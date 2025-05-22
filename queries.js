@@ -21,6 +21,6 @@ export async function insertComprehensiveReport(report) {
 }
 
 export async function readComprehensiveReport() {
-    const result = await pool.query('SELECT creport FROM comprehensivereportreal ORDER BY id DESC LIMIT 1;');
+    const result = await pool.query('SELECT creport FROM comprehensivereport ORDER BY id DESC LIMIT 1;');
     return JSON.parse(result.rows[0].creport);
 }
