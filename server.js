@@ -15,14 +15,14 @@ const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
     const gildaCount = [];
+    let gilde = [];
 
     battaglie.forEach((battaglia) => {
 
         const temp = JSON.parse(JSON.stringify(battaglia));
         console.log(temp);
 
-        const gilde = battaglia.gilde;
-        console.log(gilde);
+        gilde = battaglia.gilde;
 
         gilde.forEach(gilda => {
             const nome = gilda.nome;
