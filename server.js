@@ -144,6 +144,7 @@ async function fetchBattles() {
 
     try{
         const battaglie = await readLast14DailyBattleJson();
+        console.log("Battaglie caricate:", battaglie.length);
         const report = generaReportGilde(battaglie);
         await insertComprehensiveReport(report);
         console.log("creport success");
