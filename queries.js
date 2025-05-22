@@ -1,26 +1,29 @@
 import pool from './db.js';
 
 export async function insertDailyBattleJson(collected) {
-    await pool.query('DELETE FROM dailybattlesreal');
-    await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
+    await pool.query('DROP TABLE IF EXISTS comprehensivereport;');
+    await pool.query('DROP TABLE IF EXISTS comprehensivereportreal;');
+    await pool.query('DROP TABLE IF EXISTS dailybattles;');
+    await pool.query('DROP TABLE IF EXISTS dailybattlesreal;');
+    //await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
 
 export async function readDailyBattleJson() {
-    const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
-    return result.rows[0].report;
+    //const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
+    //return result.rows[0].report;
 }
 
 export async function readLast14DailyBattleJson() {
-    const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 14');
-    return result.rows.map(row => row.report);
+    //const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 14');
+    //return result.rows.map(row => row.report);
 }
 
 export async function insertComprehensiveReport(report) {
-    await pool.query('DELETE FROM comprehensivereportreal');
-    await pool.query('INSERT INTO comprehensivereportreal (creport) VALUES ($1)', [report]);
+    //await pool.query('DELETE FROM comprehensivereportreal');
+    //await pool.query('INSERT INTO comprehensivereportreal (creport) VALUES ($1)', [report]);
 }
 
 export async function readComprehensiveReport() {
-    const result = await pool.query('SELECT creport FROM comprehensivereportreal ORDER BY id DESC LIMIT 1;');
-    return result.rows[0].creport;
+    //const result = await pool.query('SELECT creport FROM comprehensivereportreal ORDER BY id DESC LIMIT 1;');
+    //return result.rows[0].creport;
 }
