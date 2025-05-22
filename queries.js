@@ -12,7 +12,7 @@ export async function readDailyBattleJson() {
 
 export async function readLast14DailyBattleJson() {
     const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 14;');
-    return result.rows;
+    return result;
 }
 
 export async function insertComprehensiveReport(report) {

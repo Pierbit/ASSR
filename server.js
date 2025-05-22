@@ -129,7 +129,7 @@ async function fetchBattles() {
         const output = {};
 
         for(let battle of result) {
-            const battaglia = JSON.stringify(battle);
+            const battaglia = JSON.stringify(battle, null, 2);
             console.log("per ogni battaglia..")
             console.log(battaglia);
             for(let gilda of battaglia.gilde){
