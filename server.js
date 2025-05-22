@@ -173,7 +173,7 @@ fetchBattles();
 
 app.get('/api/battles/day', async (req, res) => {
     try{
-        res.json(await readDailyBattleJson());
+        res.json(JSON.parse(await readDailyBattleJson()));
     }catch (err){
         console.log(err);
         res.status(404).json({error: "Battles not found"});
@@ -182,7 +182,7 @@ app.get('/api/battles/day', async (req, res) => {
 
 app.get('/api/battles/week', async (req, res) => {
     try{
-        res.json(await readComprehensiveReport());
+        res.json(JSON.parse(await readComprehensiveReport()));
     }catch (err){
         console.log(err);
         res.status(404).json({error: "Weekly Battles not found"});
