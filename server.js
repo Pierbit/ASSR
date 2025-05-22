@@ -15,23 +15,24 @@ const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
-    const gildaCount = [];
+    const gildaCount = {};
 
     battaglie.forEach((battaglia) => {
+        // Convertiamo tutto in una riga unica per evitare problemi con newline o spazi
+        const battagliaStringa = JSON.stringify(battaglia);
+        const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
 
-        console.log(JSON.stringify(battaglia));
+        // Trova tutte le occorrenze del tipo "nome": "Yum Yum"
+        const regexNomiGilde = /"nome"\s*:\s*"([^"]+)"/g;
+        let match;
 
-        const gilde = battaglia.gilde;
-
-        gilde.forEach(gilda => {
-            const nome = gilda.nome;
-            if (!nome) return;
-
+        while ((match = regexNomiGilde.exec(stringaPulita)) !== null) {
+            const nome = match[1];
             if (!gildaCount[nome]) {
                 gildaCount[nome] = 0;
             }
             gildaCount[nome]++;
-        });
+        }
     });
 
     return gildaCount;
