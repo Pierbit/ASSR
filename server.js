@@ -143,7 +143,6 @@ async function fetchBattles() {
     }
 
     try{
-
         const battaglie = await readLast14DailyBattleJson();
         const report = generaReportGilde(battaglie);
         await insertComprehensiveReport(report);
