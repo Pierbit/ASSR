@@ -22,6 +22,7 @@ function generaReportGilde(battaglie) {
         console.log(temp);
 
         const gilde = battaglia.gilde;
+        console.log(gilde);
 
         gilde.forEach(gilda => {
             const nome = gilda.nome;
