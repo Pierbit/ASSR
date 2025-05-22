@@ -1,7 +1,6 @@
 import pool from './db.js';
 
 export async function insertDailyBattleJson(collected) {
-    await pool.query('DELETE FROM dailybattles');
     await pool.query('INSERT INTO dailybattles (report) VALUES ($1)', [collected]);
 }
 
