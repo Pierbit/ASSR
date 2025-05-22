@@ -2,7 +2,7 @@ import pool from './db.js';
 
 export async function insertDailyBattleJson(collected) {
     await pool.query('DELETE FROM dailybattlesreal');
-    await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1::json)', [collected]);
+    await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
 
 export async function readDailyBattleJson() {

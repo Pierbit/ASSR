@@ -19,7 +19,7 @@ function generaReportGilde(battaglie) {
     battaglie.forEach((battaglia, i) => {
         console.log(`Analizzo battaglia ${i + 1}`);
 
-        console.log(battaglia);
+        console.log(JSON.stringify(battaglia));
 
         const gilde = temp || [];
 
@@ -140,7 +140,7 @@ async function fetchBattles() {
         .filter(battle => battle !== null);
 
     try {
-        await insertDailyBattleJson(battaglie);
+        await insertDailyBattleJson(JSON.stringify(battaglie));
         console.log("Inserimento completato con successo!");
     } catch (err) {
         console.error("Errore durante l'inserimento nel DB:", err);
