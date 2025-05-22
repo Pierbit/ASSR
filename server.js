@@ -2,6 +2,7 @@
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
+import GSON from 'gson';
 import fs from 'fs';
 import {readDailyBattleJson, insertDailyBattleJson, readLast14DailyBattleJson, insertComprehensiveReport, readComprehensiveReport} from "./queries.js";
 
@@ -15,25 +16,16 @@ const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
     const gildaCount = [];
-    let gilde = [];
+    let gilde= [];
 
-    battaglie.forEach((battaglia) => {
+   for(let i = 0; i < battaglie.length; i++){
 
-        const temp = JSON.parse(JSON.stringify(battaglia));
-        console.log(temp);
+       for(let j = 0; j < battaglie[i].gilde; j++){
 
-        gilde = battaglia.gilde;
-
-        gilde.forEach(gilda => {
-            const nome = gilda.nome;
-            if (!nome) return;
-
-            if (!gildaCount[nome]) {
-                gildaCount[nome] = 0;
-            }
-            gildaCount[nome]++;
-        });
-    });
+           console.log("cazzi")
+           console.log(gilde[j].nome)
+       }
+   }
 
     return gildaCount;
 }
