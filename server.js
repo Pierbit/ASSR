@@ -20,7 +20,7 @@ function generaReportGilde(battaglie) {
         console.log(`Analizzo battaglia ${i + 1}`);
 
         const temp = JSON.stringify(battaglia);
-        console.log(temp);
+        console.log(temp[0]);
 
         const gilde = temp || [];
 
