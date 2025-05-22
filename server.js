@@ -13,6 +13,26 @@ app.use(cors());
 const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
 
+function generaReportGilde(battaglie) {
+    const gildaCount = {};
+
+    battaglie.forEach(battaglia => {
+        const gilde = battaglia.gilde || [];
+
+        gilde.forEach(gilda => {
+            const nome = gilda.nome;
+            if (!nome) return;
+
+            if (!gildaCount[nome]) {
+                gildaCount[nome] = 0;
+            }
+            gildaCount[nome]++;
+        });
+    });
+
+    return gildaCount;
+}
+
 async function fetchBattles() {
     console.log("Fetching battles...");
     let collected = [];
@@ -124,23 +144,11 @@ async function fetchBattles() {
 
     try{
 
-        const result = await readLast14DailyBattleJson();
-        //console.log(JSON.stringify(result, null, 2));
-        const output = {};
+        const battaglie = await readLast14DailyBattleJson();
+        const report = generaReportGilde(battaglie);
+        await insertComprehensiveReport(report);
+        console.log("creport success");
 
-        for(let battle of result) {
-            const battaglia = JSON.stringify(battle, null, 2);
-            console.log("per ogni battaglia..")
-            console.log(battaglia);
-            for(let gilda of battaglia.gilde){
-                const key = gilda.nome;
-                if(!output[key]){
-                    output[key] = {activity: 0};
-                }
-                output[key].activity++;
-            }
-        }
-        await insertComprehensiveReport(JSON.stringify(output));
     }catch(err){
         console.error("Errore weekly report:", err);
     }
