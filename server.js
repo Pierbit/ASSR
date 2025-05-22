@@ -16,7 +16,15 @@ const FILE_PATH2 = './battaglie.json';
 function generaReportGilde(battaglie) {
     const gildaCount = {};
 
-    battaglie.forEach(battaglia => {
+    battaglie.forEach((battaglia, i) => {
+        console.log(`Analizzo battaglia ${i + 1}`);
+
+        if (!battaglia.gilde) {
+            console.log("Nessuna chiave 'gilde' trovata, battaglia:", battaglia);
+        } else {
+            console.log("Gilde trovate:", battaglia.gilde.map(g => g.nome));
+        }
+
         const gilde = battaglia.gilde || [];
 
         gilde.forEach(gilda => {
@@ -145,7 +153,7 @@ async function fetchBattles() {
     try{
         const battaglie = await readLast14DailyBattleJson();
         console.log("Battaglie caricate:", battaglie.length);
-        console.log("Battaglia:", JSON.stringify(battaglie[0], null, 2));
+        //console.log("Battaglia:", JSON.stringify(battaglie[0], null, 2));
         const report = generaReportGilde(battaglie);
         await insertComprehensiveReport(report);
         console.log("creport success");
