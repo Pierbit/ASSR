@@ -19,6 +19,15 @@ function generaReportGilde(battaglie) {
     battaglie.forEach((battaglia, i) => {
         console.log(`Analizzo battaglia ${i + 1}`);
 
+        console.log("Tipo di battaglia.gilde:", typeof battaglia.gilde);
+        console.log("Contenuto battaglia.gilde:", battaglia.gilde);
+
+        if (!Array.isArray(battaglia.gilde)) {
+            console.log("'gilde' NON è un array valido:", battaglia.gilde);
+        } else {
+            console.log("'gilde' è un array con", battaglia.gilde.length, "elementi");
+        }
+
         if (!battaglia.gilde) {
             console.log("Nessuna chiave 'gilde' trovata, battaglia intera:");
             console.log(JSON.stringify(battaglia, null, 2));
@@ -74,7 +83,7 @@ async function fetchBattles() {
             console.error("Errore durante il fetch:", err);
         }
         offset+=limit;
-        console.log("offset: "+offset);
+        //console.log("offset: "+offset);
     }
 
     const battaglie = collected
