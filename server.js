@@ -19,17 +19,17 @@ function generaReportGilde(battaglie) {
     battaglie.forEach((battaglia, i) => {
         console.log(`Analizzo battaglia ${i + 1}`);
 
-        console.log("Tipo di battaglia:", typeof battaglia);
+        const temp = JSON.stringify(battaglia.gilde);
 
-        if (!battaglia.gilde) {
+        if (!temp) {
             console.log("Nessuna chiave 'gilde' trovata, battaglia intera:");
             console.log(JSON.stringify(battaglia, null, 2));
         } else {
             console.log("Gilde trovate:");
-            console.log(JSON.stringify(battaglia.gilde, null, 2));
+            console.log(JSON.stringify(temp, null, 2));
         }
 
-        const gilde = battaglia.gilde || [];
+        const gilde = temp || [];
 
         gilde.forEach(gilda => {
             const nome = gilda.nome;
