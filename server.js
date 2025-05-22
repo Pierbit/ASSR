@@ -19,7 +19,7 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
-        console.log(battaglia);
+        console.log(JSON.stringify(battaglia));
 
         const gilde = battaglia.gilde;
 
