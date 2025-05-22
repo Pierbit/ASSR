@@ -19,7 +19,8 @@ function generaReportGilde(battaglie) {
     battaglie.forEach((battaglia, i) => {
         console.log(`Analizzo battaglia ${i + 1}`);
 
-        console.log(JSON.stringify(battaglia));
+        const temp = JSON.parse(JSON.stringify(battaglia));
+        console.log(temp);
 
         const gilde = battaglia.gilde;
 
