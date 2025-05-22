@@ -16,16 +16,24 @@ const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
     const gildaCount = [];
-    let gilde= [];
+    let gilde = [];
 
-   for(let i = 0; i < battaglie.length; i++){
-       console.log("pisello")
-       for(let j = 0; j < battaglie[i].gilde; j++){
+    battaglie.forEach((battaglia) => {
 
-           console.log("cazzi")
-           console.log(gilde[j].nome)
-       }
-   }
+        console.log(JSON.stringify(battaglia.gilde, null, 2));
+
+        gilde = battaglia.gilde;
+
+        gilde.forEach(gilda => {
+            const nome = gilda.nome;
+            if (!nome) return;
+
+            if (!gildaCount[nome]) {
+                gildaCount[nome] = 0;
+            }
+            gildaCount[nome]++;
+        });
+    });
 
     return gildaCount;
 }
