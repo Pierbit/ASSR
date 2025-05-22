@@ -20,14 +20,7 @@ function generaReportGilde(battaglie) {
         console.log(`Analizzo battaglia ${i + 1}`);
 
         const temp = JSON.stringify(battaglia.gilde);
-
-        if (!temp) {
-            console.log("Nessuna chiave 'gilde' trovata, battaglia intera:");
-            console.log(JSON.stringify(battaglia, null, 2));
-        } else {
-            console.log("Gilde trovate:");
-            console.log(JSON.stringify(temp, null, 2));
-        }
+        console.log(temp);
 
         const gilde = temp || [];
 
