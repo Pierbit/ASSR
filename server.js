@@ -119,7 +119,7 @@ async function fetchBattles() {
         .filter(battle => battle !== null);
 
     try {
-        await insertDailyBattleJson(JSON.stringify(collected));
+        await insertDailyBattleJson(JSON.stringify(battaglie));
         console.log("Inserimento completato con successo!");
     } catch (err) {
         console.error("Errore durante l'inserimento nel DB:", err);
@@ -151,6 +151,7 @@ app.listen(PORT, () => {
 });
 
 async function insertDailyBattleJson(collected) {
+    await pool.query('DELETE FROM dailybattlesreal');
     await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
 
