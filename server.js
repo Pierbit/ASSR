@@ -65,13 +65,13 @@ async function fetchBattles() {
                 guildMap[guild].count++;
             });
 
-            // Prendi solo le gilde con almeno 10 player
+
             const significantGuilds = Object.entries(guildMap)
                 .filter(([_, data]) => data.count >= 10);
 
             if (significantGuilds.length < 2) return null;
 
-            // Raggruppa i player delle gilde significative per alleanza
+
             const allianceCounts = {};
 
             significantGuilds.forEach(([_, data]) => {
@@ -79,11 +79,10 @@ async function fetchBattles() {
                 allianceCounts[alliance] = (allianceCounts[alliance] || 0) + data.count;
             });
 
-            // Se una singola alleanza ha ≥25 player tra le gilde principali → SCARTA
             const dominantAlly = Object.values(allianceCounts).some(count => count >= 25);
             if (dominantAlly) return null;
 
-            //Prendi tutte le gilde secondarie e contane i players totali
+
             const secondaryGuilds = Object.entries(guildMap)
                 .filter(([_, data]) => data.count < 10);
             let participantsCount = 0;
@@ -91,7 +90,6 @@ async function fetchBattles() {
                 participantsCount+=secondaryGuilds[i][1].count;
             }
 
-            // Calcola la gilda vincente (tra quelle significative)
             let winner = null;
             let maxKills = -1;
             for (const [name, data] of significantGuilds) {
@@ -101,7 +99,6 @@ async function fetchBattles() {
                 }
             }
 
-            // Se passa i filtri, costruisci l'oggetto finale
             return {
                 id: battle.id,
                 data: battle.endTime,
@@ -132,11 +129,11 @@ async function fetchBattles() {
     console.log(`Salvate ${collected.length} battaglie`);
 }
 
-// aggiorna ogni 10 minuti
-setInterval(fetchBattles, 28800000);
-fetchBattles(); // fetch iniziale
 
-// endpoint per leggere le battaglie
+setInterval(fetchBattles, 28800000);
+fetchBattles();
+
+
 app.get('/api/battles', async (req, res) => {
     try{
         res.json(await readDailyBattleJson());
@@ -151,7 +148,6 @@ app.listen(PORT, () => {
 });
 
 async function insertDailyBattleJson(collected) {
-    await pool.query('DELETE FROM dailybattlesreal');
     await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
 
