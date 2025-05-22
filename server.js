@@ -21,10 +21,7 @@ function generaReportGilde(battaglie) {
 
         if (!battaglia.gilde) {
             console.log("Nessuna chiave 'gilde' trovata, battaglia:", battaglia);
-        } else {
-            console.log("Gilde trovate:", battaglia.gilde.map(g => g.nome));
         }
-
         const gilde = battaglia.gilde || [];
 
         gilde.forEach(gilda => {
