@@ -151,5 +151,5 @@ app.listen(PORT, () => {
 });
 
 async function insertDailyBattleJson(collected) {
-    await pool.query('INSERT INTO dailybattles (report) VALUES ($1)', [collected]);
+    await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
