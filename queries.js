@@ -1,6 +1,7 @@
 import pool from './db.js';
 
 export async function insertDailyBattleJson(collected) {
+    await pool.query('DELETE FROM dailybattlesreal');
     await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
 }
 
@@ -11,7 +12,7 @@ export async function readDailyBattleJson() {
 
 export async function readLast14DailyBattleJson() {
     const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 14;');
-    return result.rows.map(row => row.report);
+    return result.rows;
 }
 
 export async function insertComprehensiveReport(report) {
