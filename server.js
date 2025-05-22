@@ -14,7 +14,7 @@ const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
-    const gildaCount = {};
+    const gildaCount = [];
 
     battaglie.forEach((battaglia, i) => {
         console.log(`Analizzo battaglia ${i + 1}`);
