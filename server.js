@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
 import fs from 'fs';
+import {readDailyBattleJson, insertDailyBattleJson, readLast14DailyBattleJson, insertComprehensiveReport, readComprehensiveReport} from "./queries.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,7 +12,6 @@ app.use(cors());
 
 const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
-import pool from './db.js';
 
 async function fetchBattles() {
     console.log("Fetching battles...");
@@ -122,6 +122,23 @@ async function fetchBattles() {
         console.error("Errore durante l'inserimento nel DB:", err);
     }
 
+    try{
+        const result = await readLast14DailyBattleJson();
+        const output = {};
+        for(let battle of result) {
+            for(let gilda of battle.gilde){
+                const key = gilda.nome;
+                if(!output[key]){
+                    output[key] = {activity: 0};
+                }
+                output[key].activity++;
+            }
+        }
+        await insertComprehensiveReport(JSON.stringify(output));
+    }catch(err){
+        console.error("Errore weekly report:", err);
+    }
+
     fs.writeFileSync(FILE_PATH1, JSON.stringify(collected, null, 2));
     fs.writeFileSync(FILE_PATH2, JSON.stringify(battaglie, null, 2));
 
@@ -134,7 +151,7 @@ setInterval(fetchBattles, 28800000);
 fetchBattles();
 
 
-app.get('/api/battles', async (req, res) => {
+app.get('/api/battles/day', async (req, res) => {
     try{
         res.json(await readDailyBattleJson());
     }catch (err){
@@ -143,15 +160,16 @@ app.get('/api/battles', async (req, res) => {
     }
 });
 
+app.get('/api/battles/week', async (req, res) => {
+    try{
+        res.json(await readComprehensiveReport());
+    }catch (err){
+        console.log(err);
+        res.status(404).json({error: "Weekly Battles not found"});
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`Albion proxy server in ascolto su http://localhost:${PORT}`);
 });
 
-async function insertDailyBattleJson(collected) {
-    await pool.query('INSERT INTO dailybattlesreal (report) VALUES ($1)', [collected]);
-}
-
-async function readDailyBattleJson() {
-    const result = await pool.query('SELECT report FROM dailybattlesreal ORDER BY id DESC LIMIT 1;');
-    return result.rows[0].report;
-}
