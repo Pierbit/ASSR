@@ -53,8 +53,8 @@ async function fetchBattles() {
         try {
             const res = await fetch(url);
             const data = await res.json();
-            console.log(`FETCH URL: ${url}`);
-            console.log(`Status: ${res.status}`);
+            //console.log(`FETCH URL: ${url}`);
+            //console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
                 const date = new Date(battle.startTime);
