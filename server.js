@@ -19,7 +19,7 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
-        console.log(JSON.stringify(battaglia));
+        console.log(battaglia);
 
         const gilde = battaglia.gilde;
 
@@ -151,7 +151,7 @@ async function fetchBattles() {
         console.log("Battaglie caricate:", battaglie.length);
         //console.log("Battaglia:", JSON.stringify(battaglie[0], null, 2));
         const report = generaReportGilde(battaglie);
-        await insertComprehensiveReport(report);
+        await insertComprehensiveReport(JSON.stringify(report));
         console.log("creport success");
 
     }catch(err){
