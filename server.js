@@ -19,7 +19,7 @@ function generaReportGilde(battaglie) {
     let gilde= [];
 
    for(let i = 0; i < battaglie.length; i++){
-
+       console.log("pisello")
        for(let j = 0; j < battaglie[i].gilde; j++){
 
            console.log("cazzi")
