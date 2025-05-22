@@ -11,6 +11,7 @@ app.use(cors());
 
 const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
+import pool from './db.js';
 
 async function fetchBattles() {
     console.log("Fetching battles...");
@@ -117,8 +118,17 @@ async function fetchBattles() {
         })
         .filter(battle => battle !== null);
 
+    try {
+        await insertDailyBattleJson(JSON.stringify(collected));
+        console.log("Inserimento completato con successo!");
+    } catch (err) {
+        console.error("Errore durante l'inserimento nel DB:", err);
+    }
+
     fs.writeFileSync(FILE_PATH1, JSON.stringify(collected, null, 2));
     fs.writeFileSync(FILE_PATH2, JSON.stringify(battaglie, null, 2));
+
+
     console.log(`Salvate ${collected.length} battaglie`);
 }
 
@@ -139,3 +149,7 @@ app.get('/api/battles', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Albion proxy server in ascolto su http://localhost:${PORT}`);
 });
+
+async function insertDailyBattleJson(collected) {
+    await pool.query('INSERT INTO dailybattles (data) VALUES ($1)', [collected]);
+}
