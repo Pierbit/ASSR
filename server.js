@@ -18,11 +18,13 @@ function generaReportGilde(battaglie) {
     const gildaCount = {};
 
     battaglie.forEach((battaglia) => {
-        // Convertiamo tutto in una riga unica per evitare problemi con newline o spazi
+
+        console.log("cazzi")
+        console.log(battaglia.gilde[0]);
+
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
 
-        // Trova tutte le occorrenze del tipo "nome": "Yum Yum"
         const regexNomiGilde = /"nome"\s*:\s*"([^"]+)"/g;
         let match;
 
