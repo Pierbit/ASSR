@@ -19,9 +19,7 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
-        console.log(battaglia);
-        console.log(battaglia.vincitore)
-        console.log(battaglia.ratti)
+        console.log(typeof battaglia);
 
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
