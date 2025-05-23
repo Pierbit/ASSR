@@ -19,6 +19,8 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
+        console.log(battaglia);
+
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
 
@@ -31,8 +33,6 @@ function generaReportGilde(battaglie) {
                 gildaCount[nome] = {numero_battaglie: 0, vittorie: 0};
             }
             gildaCount[nome].numero_battaglie++;
-            console.log(nome)
-            console.log(battaglia.vincitore);
             if(battaglia.vincitore === nome) gildaCount[nome].vittorie++;
         }
     });
