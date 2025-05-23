@@ -63,6 +63,7 @@ async function fetchBattles() {
             //console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
+                console.log("id battaglia: "+battle.id);
                 const date = new Date(battle.startTime);
                 const hour = date.getUTCHours();
 
