@@ -19,8 +19,11 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
+        console.log("penetest1")
+        console.log(battaglia.name);
+
         if(battaglia.gilde instanceof Object) {
-            console.log("penetest")
+            console.log("penetest2")
             console.log(battaglia.gilde[0]);
             console.log(battaglia.gilde[1]);
             console.log(battaglia.gilde[2]);
