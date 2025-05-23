@@ -54,16 +54,17 @@ async function fetchBattles() {
     const limit = 51;
     let stop = false;
 
-    while(offset < 3000) {
-        //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
-        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`;
+    while(offset < 3500) {
+        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
+        //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`; //TESTING
         try {
             const res = await fetch(url);
             const data = await res.json();
             //console.log(`FETCH URL: ${url}`);
             //console.log(`Status: ${res.status}`);
 
-            const date = new Date(data.startTime);
+            //TESTING
+            /*const date = new Date(data.startTime);
             const hour = date.getUTCHours();
 
             if (hour >= 19 && hour <= 21) {
@@ -72,9 +73,9 @@ async function fetchBattles() {
                 if (totalPlayers >= 25 && totalPlayers <= 60) {
                     collected.push(data);
                 }
-            }
+            }*/
 
-            /*for (const battle of data) {
+            for (const battle of data) {
                 const date = new Date(battle.startTime);
                 const hour = date.getUTCHours();
 
@@ -85,13 +86,12 @@ async function fetchBattles() {
                         collected.push(battle);
                     }
                 }
-            }*/
+            }
 
         } catch (err) {
             console.error("Errore durante il fetch:", err);
         }
         offset+=limit;
-        //console.log("offset: "+offset);
     }
 
     const battaglie = collected
