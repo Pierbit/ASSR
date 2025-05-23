@@ -19,16 +19,6 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
-        console.log("penetest1")
-        console.log(battaglia.name);
-
-        if(battaglia.gilde instanceof Object) {
-            console.log("penetest2")
-            console.log(battaglia.gilde[0]);
-            console.log(battaglia.gilde[1]);
-            console.log(battaglia.gilde[2]);
-        }
-
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
 
@@ -38,9 +28,10 @@ function generaReportGilde(battaglie) {
         while ((match = regexNomiGilde.exec(stringaPulita)) !== null) {
             const nome = match[1];
             if (!gildaCount[nome]) {
-                gildaCount[nome] = 0;
+                gildaCount[nome] = {numero_battaglie: 0, vittorie: 0};
             }
-            gildaCount[nome]++;
+            gildaCount[nome].numero_battaglie++;
+            if(battaglia.vincitore === nome) gildaCount[nome].vittorie++;
         }
     });
 
