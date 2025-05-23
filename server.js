@@ -19,9 +19,6 @@ function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
-        console.log(battaglia.constructor);
-        console.log(battaglia.toString());
-
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
 
@@ -151,8 +148,8 @@ async function fetchBattles() {
     }
 
     try{
-        const battaglie = await readLast14DailyBattleJson();
-        //console.log("Battaglia:", JSON.stringify(battaglie[0], null, 2));
+        const rawBattaglie = await readLast14DailyBattleJson();
+        const battaglie = rawBattaglie.flat();
         const report = generaReportGilde(battaglie);
         await insertComprehensiveReport(JSON.stringify(report));
         console.log("creport success");
