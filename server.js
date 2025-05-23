@@ -60,11 +60,21 @@ async function fetchBattles() {
         try {
             const res = await fetch(url);
             const data = await res.json();
-            console.log("totale battaglie: "+data.length);
             //console.log(`FETCH URL: ${url}`);
             //console.log(`Status: ${res.status}`);
 
-            for (const battle of data) {
+            const date = new Date(data.startTime);
+            const hour = date.getUTCHours();
+
+            if (hour >= 19 && hour <= 21) {
+                const totalPlayers = Object.keys(data.players).length;
+                console.log("total players: "+totalPlayers)
+                if (totalPlayers >= 25 && totalPlayers <= 60) {
+                    collected.push(data);
+                }
+            }
+
+            /*for (const battle of data) {
                 const date = new Date(battle.startTime);
                 const hour = date.getUTCHours();
 
@@ -75,7 +85,7 @@ async function fetchBattles() {
                         collected.push(battle);
                     }
                 }
-            }
+            }*/
 
         } catch (err) {
             console.error("Errore durante il fetch:", err);
