@@ -55,20 +55,22 @@ async function fetchBattles() {
     let stop = false;
 
     while(offset < 3000) {
-        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
+        //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
+        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`;
         try {
             const res = await fetch(url);
             const data = await res.json();
+            console.log("totale battaglie: "+data.length);
             //console.log(`FETCH URL: ${url}`);
             //console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
-                console.log("id battaglia: "+battle.id);
                 const date = new Date(battle.startTime);
                 const hour = date.getUTCHours();
 
                 if (hour >= 19 && hour <= 21) {
                     const totalPlayers = Object.keys(battle.players).length;
+                    console.log(totalPlayers)
                     if (totalPlayers >= 25 && totalPlayers <= 60) {
                         collected.push(battle);
                     }
