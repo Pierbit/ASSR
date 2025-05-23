@@ -81,7 +81,6 @@ async function fetchBattles() {
 
                 if (hour >= 19 && hour <= 21) {
                     const totalPlayers = Object.keys(battle.players).length;
-                    console.log(totalPlayers)
                     if (totalPlayers >= 25 && totalPlayers <= 60) {
                         collected.push(battle);
                     }
