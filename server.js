@@ -16,11 +16,10 @@ const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
     const gildaCount = {};
+    console.log("pene")
+    console.log(battaglie)
 
     battaglie.forEach((battaglia) => {
-
-        console.log("cazzi")
-        console.log(battaglia.gilde[0]);
 
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
