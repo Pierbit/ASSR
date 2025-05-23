@@ -16,13 +16,8 @@ const FILE_PATH2 = './battaglie.json';
 
 function generaReportGilde(battaglie) {
     const gildaCount = {};
-    console.log("pene")
-    console.log(battaglie)
 
     battaglie.forEach((battaglia) => {
-
-        console.log("peni")
-        console.log(battaglia)
 
         const battagliaStringa = JSON.stringify(battaglia);
         const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
@@ -153,7 +148,7 @@ async function fetchBattles() {
 
     try{
         const battaglie = await readLast14DailyBattleJson();
-        console.log("Battaglie caricate:", battaglie.length);
+        console.log("test query:", battaglie);
         //console.log("Battaglia:", JSON.stringify(battaglie[0], null, 2));
         const report = generaReportGilde(battaglie);
         await insertComprehensiveReport(JSON.stringify(report));
