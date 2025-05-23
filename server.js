@@ -31,6 +31,8 @@ function generaReportGilde(battaglie) {
                 gildaCount[nome] = {numero_battaglie: 0, vittorie: 0};
             }
             gildaCount[nome].numero_battaglie++;
+            console.log(nome)
+            console.log(battaglia.vincitore);
             if(battaglia.vincitore === nome) gildaCount[nome].vittorie++;
         }
     });
