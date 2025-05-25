@@ -180,6 +180,7 @@ async function fetchBattles() {
         const rawBattaglie = await readLast14DailyBattleJson();
         const battaglie = rawBattaglie.flat();
         const report = generaReportGilde(battaglie);
+        console.log(report.length);
         await insertComprehensiveReport(JSON.stringify(report));
         console.log("creport success");
 
