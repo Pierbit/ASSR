@@ -1,4 +1,3 @@
-// server.js
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
@@ -14,7 +13,7 @@ app.use(cors());
 const FILE_PATH1 = './battles.json';
 const FILE_PATH2 = './battaglie.json';
 
-function generaReportGilde(battaglie) {
+export function generaReportGilde(battaglie) {
     const gildaCount = {};
 
     battaglie.forEach((battaglia) => {
@@ -221,4 +220,3 @@ app.get('/api/battles/week', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Albion proxy server in ascolto su http://localhost:${PORT}`);
 });
-

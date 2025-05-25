@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,8 @@
     "gson": "^0.1.5",
     "node-fetch": "^3.3.2",
     "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
