@@ -196,7 +196,7 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 14400000);
+setInterval(fetchBattles, 28800000);
 fetchBattles();
 
 
