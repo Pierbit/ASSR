@@ -162,7 +162,16 @@ async function fetchBattles() {
         .filter(battle => battle !== null);
 
     try {
-        await insertDailyBattleJson(JSON.stringify(battaglie));
+        const last_battles_raw = await readDailyBattleJson();
+        const last_battles = JSON.stringify(last_battles_raw);
+        const current_battles = JSON.stringify(battaglie);
+
+        if(last_battles === current_battles) {
+            console.log("Duplicate report, no further action taken")
+            return -1;
+        }
+
+        await insertDailyBattleJson(current_battles);
         console.log("Inserimento completato con successo!");
     } catch (err) {
         console.error("Errore durante l'inserimento nel DB:", err);
@@ -187,7 +196,7 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 86400000);
+setInterval(fetchBattles, 14400000);
 fetchBattles();
 
 
