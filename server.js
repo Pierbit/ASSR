@@ -85,9 +85,7 @@ async function fetchBattles() {
                 const hour = date.getUTCHours();
 
                 if(day === yesterday) {
-                    console.log("dioporco")
                     if (hour >= 19 && hour <= 21) {
-                        console.log("diocane")
                         const totalPlayers = Object.keys(battle.players).length;
                         if (totalPlayers >= 25 && totalPlayers <= 60) {
                             console.log("diomerda")
