@@ -53,7 +53,7 @@ async function fetchBattles() {
     const limit = 51;
     let stop = false;
 
-    while(offset < 3500) {
+    while(offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
         //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`; //TESTING
         try {
@@ -75,13 +75,21 @@ async function fetchBattles() {
             }*/
 
             for (const battle of data) {
+
                 const date = new Date(battle.startTime);
+                const day = date.getDate();
+
+                const today = new Date(Date.now());
+                const yesterday = today.getDate() - 1;
+
                 const hour = date.getUTCHours();
 
-                if (hour >= 19 && hour <= 21) {
-                    const totalPlayers = Object.keys(battle.players).length;
-                    if (totalPlayers >= 25 && totalPlayers <= 60) {
-                        collected.push(battle);
+                if(day === yesterday) {
+                    if (hour >= 19 && hour <= 21) {
+                        const totalPlayers = Object.keys(battle.players).length;
+                        if (totalPlayers >= 25 && totalPlayers <= 60) {
+                            collected.push(battle);
+                        }
                     }
                 }
             }
