@@ -82,6 +82,9 @@ async function fetchBattles() {
                 const today = new Date(Date.now());
                 const yesterday = today.getDate() - 1;
 
+                console.log("giorno battaglia "+day)
+                console.log("ieri "+yesterday)
+
                 const hour = date.getUTCHours();
 
                 if(day === yesterday) {
