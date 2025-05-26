@@ -59,7 +59,7 @@ async function fetchBattles() {
     let offset = 0;
     const limit = 51;
     let stop = false;
-    deleteBattle();
+    //deleteBattle(); //PER CANCELLARE modificare id
 
     while(offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
@@ -96,7 +96,6 @@ async function fetchBattles() {
                     if (hour >= 19 && hour <= 21) {
                         const totalPlayers = Object.keys(battle.players).length;
                         if (totalPlayers >= 25 && totalPlayers <= 60) {
-                            console.log("diomerda")
                             collected.push(battle);
                         }
                     }
