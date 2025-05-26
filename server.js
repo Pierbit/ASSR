@@ -200,7 +200,7 @@ async function fetchBattles() {
 
 
 setInterval(fetchBattles, 28800000);
-//fetchBattles();
+fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
