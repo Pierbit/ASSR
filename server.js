@@ -59,7 +59,7 @@ async function fetchBattles() {
     let offset = 0;
     const limit = 51;
     let stop = false;
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while(offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
@@ -69,18 +69,6 @@ async function fetchBattles() {
             const data = await res.json();
             //console.log(`FETCH URL: ${url}`);
             //console.log(`Status: ${res.status}`);
-
-            //TESTING
-            /*const date = new Date(data.startTime);
-            const hour = date.getUTCHours();
-
-            if (hour >= 19 && hour <= 21) {
-                const totalPlayers = Object.keys(data.players).length;
-                console.log("total players: "+totalPlayers)
-                if (totalPlayers >= 25 && totalPlayers <= 60) {
-                    collected.push(data);
-                }
-            }*/
 
             for (const battle of data) {
 
