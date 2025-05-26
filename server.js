@@ -184,7 +184,6 @@ async function fetchBattles() {
         const rawBattaglie = await readLast14DailyBattleJson();
         const battaglie = rawBattaglie.flat();
         const report = generaReportGilde(battaglie);
-        console.log(report.length);
         await insertComprehensiveReport(JSON.stringify(report));
         console.log("creport success");
 
@@ -200,8 +199,8 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 28800000);
-fetchBattles();
+setInterval(fetchBattles, 60000);
+//fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
