@@ -1,8 +1,10 @@
 import pool from './db.js';
 
+export async function deleteBattle(){
+    await pool.query('DELETE FROM dailybattles WHERE id=41');
+}
 export async function insertDailyBattleJson(collected) {
-    await pool.query('DELETE FROM dailybattles WHERE id=41  ');
-    //await pool.query('INSERT INTO dailybattles (report) VALUES ($1)', [collected]);
+    await pool.query('INSERT INTO dailybattles (report) VALUES ($1)', [collected]);
 }
 
 export async function readDailyBattleJson() {

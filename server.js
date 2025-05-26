@@ -3,7 +3,14 @@ import cors from 'cors';
 import fetch from 'node-fetch';
 import GSON from 'gson';
 import fs from 'fs';
-import {readDailyBattleJson, insertDailyBattleJson, readLast14DailyBattleJson, insertComprehensiveReport, readComprehensiveReport} from "./queries.js";
+import {
+    readDailyBattleJson,
+    insertDailyBattleJson,
+    readLast14DailyBattleJson,
+    insertComprehensiveReport,
+    readComprehensiveReport,
+    deleteBattle
+} from "./queries.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -52,6 +59,7 @@ async function fetchBattles() {
     let offset = 0;
     const limit = 51;
     let stop = false;
+    deleteBattle();
 
     while(offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
