@@ -203,8 +203,8 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 28800000);
-fetchBattles();
+setInterval(fetchBattles, 60000);
+//fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
