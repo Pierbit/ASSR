@@ -68,7 +68,7 @@ async function fetchBattles() {
             const res = await fetch(url);
             const data = await res.json();
             //console.log(`FETCH URL: ${url}`);
-            //console.log(`Status: ${res.status}`);
+            console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
 
@@ -203,8 +203,8 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 60000);
-//fetchBattles();
+setInterval(fetchBattles, 7200000);
+fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
