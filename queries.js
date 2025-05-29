@@ -10,7 +10,11 @@ export async function insertDailyBattleJson(collected) {
 
 export async function readDailyBattleJson() {
     const result = await pool.query('SELECT report FROM dailybattles ORDER BY id DESC LIMIT 1;');
-    return JSON.parse(result.rows[0].report);
+    if (result.rows.length === 0) {
+        return null;
+    } else {
+        return JSON.parse(result.rows[0].report);
+    }
 }
 
 export async function readLast14DailyBattleJson() {

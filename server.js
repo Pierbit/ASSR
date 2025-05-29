@@ -208,18 +208,19 @@ async function fetchBattles() {
             .filter(battle => battle !== null);
 
         try {
-            const last_battles_raw = await readDailyBattleJson();
-            const last_battles = JSON.stringify(last_battles_raw);
             const current_battles = JSON.stringify(battaglie);
-
-            console.log("last_battles_raw: "+ typeof last_battles_raw);
-            console.log("last_battles: "+typeof last_battles);
-            if (last_battles === current_battles) {
-                console.log("Duplicate report, no further action taken")
-                return -1;
+            const last_battles_raw = await readDailyBattleJson();
+            if(last_battles_raw !== null) {
+                const last_battles = JSON.stringify(last_battles_raw);
+                if (last_battles === current_battles) {
+                    console.log("Duplicate report, no further action taken")
+                    return -1;
+                }else{
+                    await insertDailyBattleJson(current_battles);
+                }
+            }else{
+                await insertDailyBattleJson(current_battles);
             }
-
-            await insertDailyBattleJson(current_battles);
             console.log("Inserimento completato con successo!");
         } catch (err) {
             console.error("Errore durante l'inserimento nel DB:", err);
