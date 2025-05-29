@@ -129,6 +129,7 @@ async function fetchBattles() {
             console.error(`Error on offset ${offset}:`, err.message);
         }
 
+        await new Promise(resolve => setTimeout(resolve, 200));
         offset += limit;
     }
 
