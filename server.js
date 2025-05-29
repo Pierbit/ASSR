@@ -212,6 +212,8 @@ async function fetchBattles() {
             const last_battles = JSON.stringify(last_battles_raw);
             const current_battles = JSON.stringify(battaglie);
 
+            console.log("last_battles_raw: "+ typeof last_battles_raw);
+            console.log("last_battles: "+typeof last_battles);
             if (last_battles === current_battles) {
                 console.log("Duplicate report, no further action taken")
                 return -1;
