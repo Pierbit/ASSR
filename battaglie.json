@@ -19,29 +19,23 @@
       }
     ],
     "vincitore": "Argent Dawn",
-    "ratti": 16
-  },
-  {
-    "id": 195880005,
-    "data": "2025-05-27T21:53:47.533318900Z",
-    "gilde": [
+    "secondary": [
       {
-        "nome": "Argent Dawn",
-        "players": 14,
+        "nome": "REFAKERITOS",
+        "players": 10,
         "ally": "HIT",
-        "kills": 12,
+        "kills": 9,
         "deaths": 0
       },
       {
-        "nome": "Kanalize",
-        "players": 21,
+        "nome": "Kiddie Gang",
+        "players": 6,
         "ally": "N0VA",
         "kills": 0,
-        "deaths": 16
+        "deaths": 6
       }
     ],
-    "vincitore": "Argent Dawn",
-    "ratti": 16
+    "ratti": 0
   },
   {
     "id": 195866072,
@@ -63,29 +57,8 @@
       }
     ],
     "vincitore": "NO META",
+    "secondary": [],
     "ratti": 8
-  },
-  {
-    "id": 195860505,
-    "data": "2025-05-27T21:11:06.241859Z",
-    "gilde": [
-      {
-        "nome": "Inquisitors",
-        "players": 22,
-        "ally": "FD2D",
-        "kills": 11,
-        "deaths": 0
-      },
-      {
-        "nome": "Nation of Elites",
-        "players": 14,
-        "ally": "VLR",
-        "kills": 0,
-        "deaths": 14
-      }
-    ],
-    "vincitore": "Inquisitors",
-    "ratti": 10
   },
   {
     "id": 195857759,
@@ -114,7 +87,16 @@
       }
     ],
     "vincitore": "EXALTED",
-    "ratti": 13
+    "secondary": [
+      {
+        "nome": "Suicid3 Squad",
+        "players": 5,
+        "ally": "FISCO",
+        "kills": 0,
+        "deaths": 2
+      }
+    ],
+    "ratti": 8
   },
   {
     "id": 195855379,
@@ -136,6 +118,7 @@
       }
     ],
     "vincitore": "Yum Yum",
+    "secondary": [],
     "ratti": 13
   },
   {
@@ -158,29 +141,8 @@
       }
     ],
     "vincitore": "EXALTED",
+    "secondary": [],
     "ratti": 34
-  },
-  {
-    "id": 195850830,
-    "data": "2025-05-27T20:53:33.878018Z",
-    "gilde": [],
-    "vincitore": null,
-    "ratti": 3
-  },
-  {
-    "id": 195850775,
-    "data": "2025-05-27T20:54:34.543481600Z",
-    "gilde": [
-      {
-        "nome": "ONE-TARGET",
-        "players": 13,
-        "ally": "POST",
-        "kills": 1,
-        "deaths": 1
-      }
-    ],
-    "vincitore": "ONE-TARGET",
-    "ratti": 6
   },
   {
     "id": 195844733,
@@ -202,6 +164,7 @@
       }
     ],
     "vincitore": "Il Covo",
+    "secondary": [],
     "ratti": 1
   },
   {
@@ -224,22 +187,8 @@
       }
     ],
     "vincitore": "Bohem",
+    "secondary": [],
     "ratti": 0
-  },
-  {
-    "id": 195842585,
-    "data": "2025-05-27T20:38:56.633545600Z",
-    "gilde": [
-      {
-        "nome": "EXALTED",
-        "players": 12,
-        "ally": "POST",
-        "kills": 7,
-        "deaths": 0
-      }
-    ],
-    "vincitore": "EXALTED",
-    "ratti": 6
   },
   {
     "id": 195839620,
@@ -261,20 +210,7 @@
       }
     ],
     "vincitore": "Crescendo",
-    "ratti": 1
-  },
-  {
-    "id": 195838447,
-    "data": "2025-05-27T20:30:01.921981600Z",
-    "gilde": [],
-    "vincitore": null,
-    "ratti": 5
-  },
-  {
-    "id": 195829796,
-    "data": "2025-05-27T20:14:41.046103100Z",
-    "gilde": [],
-    "vincitore": null,
+    "secondary": [],
     "ratti": 1
   },
   {
@@ -297,6 +233,7 @@
       }
     ],
     "vincitore": "Inquisitors",
+    "secondary": [],
     "ratti": 3
   },
   {
@@ -319,22 +256,16 @@
       }
     ],
     "vincitore": "TEAM SUPREMACY",
-    "ratti": 1
-  },
-  {
-    "id": 195818109,
-    "data": "2025-05-27T20:01:05.018366500Z",
-    "gilde": [
+    "secondary": [
       {
-        "nome": "DOGWALKERS",
-        "players": 13,
+        "nome": "Anaconda",
+        "players": 1,
         "ally": "RAGE",
-        "kills": 3,
-        "deaths": 9
+        "kills": 0,
+        "deaths": 1
       }
     ],
-    "vincitore": "DOGWALKERS",
-    "ratti": 27
+    "ratti": 0
   },
   {
     "id": 195815265,
@@ -356,6 +287,7 @@
       }
     ],
     "vincitore": "Il Covo",
+    "secondary": [],
     "ratti": 1
   },
   {
@@ -378,21 +310,7 @@
       }
     ],
     "vincitore": "Savants",
-    "ratti": 1
-  },
-  {
-    "id": 195800899,
-    "data": "2025-05-27T19:23:38.279693500Z",
-    "gilde": [
-      {
-        "nome": "The Jackals",
-        "players": 20,
-        "ally": "666",
-        "kills": 2,
-        "deaths": 4
-      }
-    ],
-    "vincitore": "The Jackals",
+    "secondary": [],
     "ratti": 1
   },
   {
@@ -415,6 +333,7 @@
       }
     ],
     "vincitore": "Latwo Poszlo",
+    "secondary": [],
     "ratti": 4
   },
   {
@@ -437,7 +356,16 @@
       }
     ],
     "vincitore": "Destiny",
-    "ratti": 2
+    "secondary": [
+      {
+        "nome": "Polska Gildia",
+        "players": 1,
+        "ally": "MASS",
+        "kills": 0,
+        "deaths": 1
+      }
+    ],
+    "ratti": 1
   },
   {
     "id": 195791641,
@@ -459,21 +387,7 @@
       }
     ],
     "vincitore": "Destiny",
-    "ratti": 0
-  },
-  {
-    "id": 195789791,
-    "data": "2025-05-27T19:06:05.513935300Z",
-    "gilde": [
-      {
-        "nome": "Argent Dawn",
-        "players": 13,
-        "ally": "HIT",
-        "kills": 0,
-        "deaths": 13
-      }
-    ],
-    "vincitore": "Argent Dawn",
+    "secondary": [],
     "ratti": 0
   },
   {
@@ -496,6 +410,7 @@
       }
     ],
     "vincitore": "W R A I T H",
+    "secondary": [],
     "ratti": 0
   },
   {
@@ -525,6 +440,7 @@
       }
     ],
     "vincitore": "T-Bank Arbitrage",
+    "secondary": [],
     "ratti": 8
   }
 ]

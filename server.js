@@ -84,7 +84,7 @@ async function fetchBattles() {
     let offset = 5000;
     const limit = 51;
     let stop = false;
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while(offset < 8000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
@@ -92,7 +92,7 @@ async function fetchBattles() {
         try {
             const res = await fetch(url);
             const data = await res.json();
-            console.log(`FETCH URL: ${url}`);
+            //console.log(`FETCH URL: ${url}`);
             //console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
@@ -149,10 +149,7 @@ async function fetchBattles() {
 
                 const significantGuilds = Object.entries(guildMap)
                     .filter(([_, data]) => data.count >= 11);
-                /*if(significantGuilds.length === 1) {
-                    const insignificantGuilds = Object.entries(guildMap).filter(([_, data]) => (data.count >= 8 && data.count < 10));
 
-                }*/
                 if (significantGuilds.length < 2) return null;
 
                 const significantAlliances = new Set(
@@ -173,10 +170,18 @@ async function fetchBattles() {
 
                 const mergedGuilds = mergeAllies(significantGuilds);
 
+                if (mergedGuilds.length < 2) return null;
+
                 const allianceCounts = {};
+
                 mergedGuilds.forEach(([_, data]) => {
                     const alliance = data.alliance || 'NoAlliance';
                     allianceCounts[alliance] = (allianceCounts[alliance] || 0) + data.count;
+                });
+
+                secondaryGuildsMatched.forEach(g => {
+                    const alliance = g.ally || 'NoAlliance';
+                    allianceCounts[alliance] = (allianceCounts[alliance] || 0) + g.players;
                 });
 
                 const dominantAlly = Object.values(allianceCounts).some(count => count >= 25);
@@ -190,13 +195,6 @@ async function fetchBattles() {
                     .forEach(([_, data]) => {
                         participantsCount += data.count;
                     });
-
-                /*const secondaryGuilds = Object.entries(guildMap)
-                    .filter(([_, data]) => data.count < 11);
-                let participantsCount = 0;
-                for (let i = 0; i < secondaryGuilds.length; i++) {
-                    participantsCount += secondaryGuilds[i][1].count;
-                }*/
 
                 let winner = null;
                 let maxKills = -1;
@@ -222,7 +220,7 @@ async function fetchBattles() {
                     ratti: participantsCount,
                 };
             })
-            .filter(battle => battle !== null);
+            .filter(b => b && Array.isArray(b.gilde) && b.gilde.length > 0 && b.vincitore);
 
         try {
             const current_battles = JSON.stringify(battaglie);
@@ -265,7 +263,7 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 18000000); //5 hours
+setInterval(fetchBattles, 18000000); //5 ore
 fetchBattles();
 
 
