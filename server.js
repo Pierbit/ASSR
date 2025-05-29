@@ -100,7 +100,7 @@ async function fetchBattles() {
 
                 const now = new Date();
                 const yesterday = new Date(now);
-                yesterday.setUTCDate(now.getUTCDate() - 2);
+                yesterday.setUTCDate(now.getUTCDate() - 1);
                 yesterday.setUTCHours(0, 0, 0, 0);
 
                 const startWindow = new Date(yesterday);
