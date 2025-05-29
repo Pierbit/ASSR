@@ -88,18 +88,17 @@ async function fetchBattles() {
 
     while (offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
-        console.log(`Fetching offset ${offset}`);
 
         try {
             const res = await fetch(url);
             if (!res.ok) {
-                console.warn(`Offset ${offset} fetch failed with status ${res.status}`);
+                console.warn(`Fetch failed at offset ${offset} (status: ${res.status})`);
                 offset += limit;
                 continue;
             }
 
             const data = await res.json();
-            console.log(`→ Got ${data.length} battles`);
+            let matched = 0;
 
             const now = new Date();
             const yesterday = new Date(now);
@@ -115,23 +114,27 @@ async function fetchBattles() {
                 const battleDate = new Date(battle.startTime);
                 const totalPlayers = Object.keys(battle.players || {}).length;
 
-                const inTime =
-                    battleDate >= startWindow && battleDate <= endWindow;
-                const inRange = totalPlayers >= 25 && totalPlayers <= 60;
-
-                const result = inTime && inRange ? "✅ MATCHED" : "❌ SKIPPED";
-                console.log(`[${result}] Battle ${battle.id} | Time OK: ${inTime} | Players: ${totalPlayers}`);
-
-                if (inTime && inRange) collected.push(battle);
+                if (
+                    battleDate >= startWindow &&
+                    battleDate <= endWindow &&
+                    totalPlayers >= 25 &&
+                    totalPlayers <= 60
+                ) {
+                    collected.push(battle);
+                    matched++;
+                }
             }
 
+            console.log(`Offset ${offset}: ${data.length} battles fetched, ${matched} matched.`);
+
         } catch (err) {
-            console.error(`Error on offset ${offset}:`, err.message);
+            console.error(`Error at offset ${offset}:`, err.message);
         }
 
         await new Promise(resolve => setTimeout(resolve, 200));
         offset += limit;
     }
+
 
     if(collected.length > 0) {
         const battaglie = collected
