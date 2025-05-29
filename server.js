@@ -86,30 +86,42 @@ async function fetchBattles() {
     let stop = false;
     //deleteBattle(); //PER CANCELLARE modificare id
 
-    while(offset < 3000) {
+    while (offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
-        //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`; //TESTING
+        console.log(`Fetching URL: ${url}`);
+
         try {
             const res = await fetch(url);
+            console.log(`Status: ${res.status}`);
+
+            if (!res.ok) {
+                console.warn(`Response not OK. Skipping this batch at offset ${offset}`);
+                offset += limit;
+                continue;
+            }
+
             const data = await res.json();
-            //console.log(`FETCH URL: ${url}`);
-            //console.log(`Status: ${res.status}`);
+            console.log(`Fetched ${data.length} battles at offset ${offset}`);
+
+            const now = new Date();
+            const yesterday = new Date(now);
+            yesterday.setUTCDate(now.getUTCDate() - 1);
+            yesterday.setUTCHours(0, 0, 0, 0);
+
+            const startWindow = new Date(yesterday);
+            startWindow.setUTCHours(19, 0, 0, 0);
+
+            const endWindow = new Date(yesterday);
+            endWindow.setUTCHours(21, 59, 59, 999);
 
             for (const battle of data) {
                 const battleDate = new Date(battle.startTime);
-
-                const now = new Date();
-                const yesterday = new Date(now);
-                yesterday.setUTCDate(now.getUTCDate() - 1);
-                yesterday.setUTCHours(0, 0, 0, 0);
-
-                const startWindow = new Date(yesterday);
-                startWindow.setUTCHours(19, 0, 0, 0);
-
-                const endWindow = new Date(yesterday);
-                endWindow.setUTCHours(21, 59, 59, 999);
-
                 const totalPlayers = Object.keys(battle.players).length;
+
+                console.log(`Battle ID: ${battle.id}`);
+                console.log(`Start time: ${battle.startTime} | Parsed: ${battleDate.toISOString()}`);
+                console.log(`Total players: ${totalPlayers}`);
+                console.log(`Window: ${startWindow.toISOString()} - ${endWindow.toISOString()}`);
 
                 if (
                     battleDate >= startWindow &&
@@ -117,14 +129,24 @@ async function fetchBattles() {
                     totalPlayers >= 25 &&
                     totalPlayers <= 60
                 ) {
+                    console.log(`-> Battle ${battle.id} matches criteria, pushing to collected.`);
                     collected.push(battle);
+                } else {
+                    console.log(`-> Battle ${battle.id} does NOT match criteria.`);
+                    if (battleDate < startWindow || battleDate > endWindow) {
+                        console.log(`--> Reason: Battle date not in time window.`);
+                    }
+                    if (totalPlayers < 25 || totalPlayers > 60) {
+                        console.log(`--> Reason: Player count out of range (${totalPlayers}).`);
+                    }
                 }
             }
 
         } catch (err) {
             console.error("Errore durante il fetch:", err);
         }
-        offset+=limit;
+
+        offset += limit;
     }
 
     if(collected.length > 0) {
