@@ -96,7 +96,7 @@ async function fetchBattles() {
     let offset = 5000;
     const limit = 51;
     let stop = false;
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while(offset < 8000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
