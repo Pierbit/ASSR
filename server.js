@@ -53,40 +53,83 @@ export function generaReportGilde(battaglie) {
     return gildaCount;
 }
 
+function mergeAllies(significantGuilds) {
+    const allyMap = {};
+
+    for (const [name, data] of significantGuilds) {
+        const ally = data.alliance || 'NoAlliance';
+        if (!allyMap[ally]) allyMap[ally] = [];
+        allyMap[ally].push([name, data]);
+    }
+
+    const mergedGuilds = [];
+
+    for (const [ally, guilds] of Object.entries(allyMap)) {
+        if (guilds.length === 1) {
+            mergedGuilds.push(guilds[0]);
+        } else {
+            const mergedName = guilds.map(([name]) => name).sort().join('+');
+            const mergedData = guilds.reduce(
+                (acc, [_, data]) => {
+                    acc.kills += data.kills;
+                    acc.deaths += data.deaths;
+                    acc.count += data.count;
+                    return acc;
+                },
+                {
+                    kills: 0,
+                    deaths: 0,
+                    count: 0,
+                    alliance: ally
+                }
+            );
+            mergedGuilds.push([mergedName, mergedData]);
+        }
+    }
+
+    return mergedGuilds;
+}
+
 async function fetchBattles() {
     console.log("Fetching battles...");
     let collected = [];
-    let offset = 0;
+    let offset = 5000;
     const limit = 51;
     let stop = false;
     //deleteBattle(); //PER CANCELLARE modificare id
 
-    while(offset < 3000) {
+    while(offset < 8000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
         //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`; //TESTING
         try {
             const res = await fetch(url);
             const data = await res.json();
-            //console.log(`FETCH URL: ${url}`);
-            console.log(`Status: ${res.status}`);
+            console.log(`FETCH URL: ${url}`);
+            //console.log(`Status: ${res.status}`);
 
             for (const battle of data) {
+                const battleDate = new Date(battle.startTime);
 
-                const date = new Date(battle.startTime);
-                const day = date.getDate();
+                const now = new Date();
+                const yesterday = new Date(now);
+                yesterday.setUTCDate(now.getUTCDate() - 2);
+                yesterday.setUTCHours(0, 0, 0, 0);
 
-                const today = new Date(Date.now());
-                const yesterday = today.getDate() - 1;
+                const startWindow = new Date(yesterday);
+                startWindow.setUTCHours(19, 0, 0, 0);
 
-                const hour = date.getUTCHours();
+                const endWindow = new Date(yesterday);
+                endWindow.setUTCHours(21, 59, 59, 999);
 
-                if(day === yesterday) {
-                    if (hour >= 19 && hour <= 21) {
-                        const totalPlayers = Object.keys(battle.players).length;
-                        if (totalPlayers >= 25 && totalPlayers <= 60) {
-                            collected.push(battle);
-                        }
-                    }
+                const totalPlayers = Object.keys(battle.players).length;
+
+                if (
+                    battleDate >= startWindow &&
+                    battleDate <= endWindow &&
+                    totalPlayers >= 25 &&
+                    totalPlayers <= 60
+                ) {
+                    collected.push(battle);
                 }
             }
 
@@ -118,13 +161,12 @@ async function fetchBattles() {
 
                 const significantGuilds = Object.entries(guildMap)
                     .filter(([_, data]) => data.count >= 10);
-
                 if (significantGuilds.length < 2) return null;
 
+                const mergedGuilds = mergeAllies(significantGuilds);
 
                 const allianceCounts = {};
-
-                significantGuilds.forEach(([_, data]) => {
+                mergedGuilds.forEach(([_, data]) => {
                     const alliance = data.alliance || 'NoAlliance';
                     allianceCounts[alliance] = (allianceCounts[alliance] || 0) + data.count;
                 });
@@ -142,7 +184,7 @@ async function fetchBattles() {
 
                 let winner = null;
                 let maxKills = -1;
-                for (const [name, data] of significantGuilds) {
+                for (const [name, data] of mergedGuilds) {
                     if (data.kills > maxKills) {
                         maxKills = data.kills;
                         winner = name;
@@ -152,7 +194,7 @@ async function fetchBattles() {
                 return {
                     id: battle.id,
                     data: battle.endTime,
-                    gilde: significantGuilds.map(([name, data]) => ({
+                    gilde: mergedGuilds.map(([name, data]) => ({
                         nome: name,
                         players: data.count,
                         ally: data.alliance,

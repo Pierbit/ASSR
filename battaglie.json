@@ -4,10 +4,10 @@
     "data": "2025-05-27T21:59:30.970207500Z",
     "gilde": [
       {
-        "nome": "REFAKERITOS",
-        "players": 10,
+        "nome": "Argent Dawn+REFAKERITOS",
+        "players": 24,
         "ally": "HIT",
-        "kills": 9,
+        "kills": 22,
         "deaths": 0
       },
       {
@@ -16,16 +16,9 @@
         "ally": "N0VA",
         "kills": 0,
         "deaths": 16
-      },
-      {
-        "nome": "Argent Dawn",
-        "players": 14,
-        "ally": "HIT",
-        "kills": 13,
-        "deaths": 0
       }
     ],
-    "vincitore": "Argent Dawn",
+    "vincitore": "Argent Dawn+REFAKERITOS",
     "ratti": 6
   },
   {
@@ -33,17 +26,10 @@
     "data": "2025-05-27T21:53:47.533318900Z",
     "gilde": [
       {
-        "nome": "REFAKERITOS",
-        "players": 10,
+        "nome": "Argent Dawn+REFAKERITOS",
+        "players": 24,
         "ally": "HIT",
-        "kills": 8,
-        "deaths": 0
-      },
-      {
-        "nome": "Argent Dawn",
-        "players": 14,
-        "ally": "HIT",
-        "kills": 12,
+        "kills": 20,
         "deaths": 0
       },
       {
@@ -54,7 +40,7 @@
         "deaths": 16
       }
     ],
-    "vincitore": "Argent Dawn",
+    "vincitore": "Argent Dawn+REFAKERITOS",
     "ratti": 6
   },
   {
