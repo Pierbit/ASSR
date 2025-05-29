@@ -81,12 +81,12 @@ function mergeAllies(significantGuilds) {
 async function fetchBattles() {
     console.log("Fetching battles...");
     let collected = [];
-    let offset = 5000;
+    let offset = 0;
     const limit = 51;
     let stop = false;
-    deleteBattle(); //PER CANCELLARE modificare id
+    //deleteBattle(); //PER CANCELLARE modificare id
 
-    while(offset < 8000) {
+    while(offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
         //const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles/193467854`; //TESTING
         try {
