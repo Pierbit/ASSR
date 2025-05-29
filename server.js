@@ -88,20 +88,18 @@ async function fetchBattles() {
 
     while (offset < 3000) {
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
-        console.log(`Fetching URL: ${url}`);
+        console.log(`Fetching offset ${offset}`);
 
         try {
             const res = await fetch(url);
-            console.log(`Status: ${res.status}`);
-
             if (!res.ok) {
-                console.warn(`Response not OK. Skipping this batch at offset ${offset}`);
+                console.warn(`Offset ${offset} fetch failed with status ${res.status}`);
                 offset += limit;
                 continue;
             }
 
             const data = await res.json();
-            console.log(`Fetched ${data.length} battles at offset ${offset}`);
+            console.log(`→ Got ${data.length} battles`);
 
             const now = new Date();
             const yesterday = new Date(now);
@@ -110,40 +108,25 @@ async function fetchBattles() {
 
             const startWindow = new Date(yesterday);
             startWindow.setUTCHours(19, 0, 0, 0);
-
             const endWindow = new Date(yesterday);
             endWindow.setUTCHours(21, 59, 59, 999);
 
             for (const battle of data) {
                 const battleDate = new Date(battle.startTime);
-                const totalPlayers = Object.keys(battle.players).length;
+                const totalPlayers = Object.keys(battle.players || {}).length;
 
-                console.log(`Battle ID: ${battle.id}`);
-                console.log(`Start time: ${battle.startTime} | Parsed: ${battleDate.toISOString()}`);
-                console.log(`Total players: ${totalPlayers}`);
-                console.log(`Window: ${startWindow.toISOString()} - ${endWindow.toISOString()}`);
+                const inTime =
+                    battleDate >= startWindow && battleDate <= endWindow;
+                const inRange = totalPlayers >= 25 && totalPlayers <= 60;
 
-                if (
-                    battleDate >= startWindow &&
-                    battleDate <= endWindow &&
-                    totalPlayers >= 25 &&
-                    totalPlayers <= 60
-                ) {
-                    console.log(`-> Battle ${battle.id} matches criteria, pushing to collected.`);
-                    collected.push(battle);
-                } else {
-                    console.log(`-> Battle ${battle.id} does NOT match criteria.`);
-                    if (battleDate < startWindow || battleDate > endWindow) {
-                        console.log(`--> Reason: Battle date not in time window.`);
-                    }
-                    if (totalPlayers < 25 || totalPlayers > 60) {
-                        console.log(`--> Reason: Player count out of range (${totalPlayers}).`);
-                    }
-                }
+                const result = inTime && inRange ? "✅ MATCHED" : "❌ SKIPPED";
+                console.log(`[${result}] Battle ${battle.id} | Time OK: ${inTime} | Players: ${totalPlayers}`);
+
+                if (inTime && inRange) collected.push(battle);
             }
 
         } catch (err) {
-            console.error("Errore durante il fetch:", err);
+            console.error(`Error on offset ${offset}:`, err.message);
         }
 
         offset += limit;
