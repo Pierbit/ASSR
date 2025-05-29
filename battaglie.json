@@ -4,32 +4,32 @@
     "data": "2025-05-27T21:59:30.970207500Z",
     "gilde": [
       {
-        "nome": "Argent Dawn+REFAKERITOS",
-        "players": 24,
-        "ally": "HIT",
-        "kills": 22,
-        "deaths": 0
-      },
-      {
         "nome": "Kanalize",
         "players": 16,
         "ally": "N0VA",
         "kills": 0,
         "deaths": 16
+      },
+      {
+        "nome": "Argent Dawn",
+        "players": 14,
+        "ally": "HIT",
+        "kills": 13,
+        "deaths": 0
       }
     ],
-    "vincitore": "Argent Dawn+REFAKERITOS",
-    "ratti": 6
+    "vincitore": "Argent Dawn",
+    "ratti": 16
   },
   {
     "id": 195880005,
     "data": "2025-05-27T21:53:47.533318900Z",
     "gilde": [
       {
-        "nome": "Argent Dawn+REFAKERITOS",
-        "players": 24,
+        "nome": "Argent Dawn",
+        "players": 14,
         "ally": "HIT",
-        "kills": 20,
+        "kills": 12,
         "deaths": 0
       },
       {
@@ -40,52 +40,8 @@
         "deaths": 16
       }
     ],
-    "vincitore": "Argent Dawn+REFAKERITOS",
-    "ratti": 6
-  },
-  {
-    "id": 195872420,
-    "data": "2025-05-27T21:39:03.056674700Z",
-    "gilde": [
-      {
-        "nome": "Green Sekai",
-        "players": 10,
-        "ally": "BAN",
-        "kills": 5,
-        "deaths": 1
-      },
-      {
-        "nome": "NewBorn",
-        "players": 10,
-        "ally": "NBR",
-        "kills": 1,
-        "deaths": 7
-      }
-    ],
-    "vincitore": "Green Sekai",
-    "ratti": 12
-  },
-  {
-    "id": 195866557,
-    "data": "2025-05-27T21:26:15.934591100Z",
-    "gilde": [
-      {
-        "nome": "GLI STIRATI",
-        "players": 10,
-        "ally": "FISCO",
-        "kills": 0,
-        "deaths": 11
-      },
-      {
-        "nome": "NewBorn",
-        "players": 11,
-        "ally": "NBR",
-        "kills": 10,
-        "deaths": 0
-      }
-    ],
-    "vincitore": "NewBorn",
-    "ratti": 9
+    "vincitore": "Argent Dawn",
+    "ratti": 16
   },
   {
     "id": 195866072,
@@ -108,6 +64,28 @@
     ],
     "vincitore": "NO META",
     "ratti": 8
+  },
+  {
+    "id": 195860505,
+    "data": "2025-05-27T21:11:06.241859Z",
+    "gilde": [
+      {
+        "nome": "Inquisitors",
+        "players": 22,
+        "ally": "FD2D",
+        "kills": 11,
+        "deaths": 0
+      },
+      {
+        "nome": "Nation of Elites",
+        "players": 14,
+        "ally": "VLR",
+        "kills": 0,
+        "deaths": 14
+      }
+    ],
+    "vincitore": "Inquisitors",
+    "ratti": 10
   },
   {
     "id": 195857759,
@@ -161,28 +139,6 @@
     "ratti": 13
   },
   {
-    "id": 195855210,
-    "data": "2025-05-27T20:59:37.246909700Z",
-    "gilde": [
-      {
-        "nome": "Solea",
-        "players": 17,
-        "ally": "POST",
-        "kills": 10,
-        "deaths": 0
-      },
-      {
-        "nome": "Ridniy Kray",
-        "players": 10,
-        "ally": "FPV",
-        "kills": 0,
-        "deaths": 10
-      }
-    ],
-    "vincitore": "Solea",
-    "ratti": 1
-  },
-  {
     "id": 195853088,
     "data": "2025-05-27T20:58:53.140498200Z",
     "gilde": [
@@ -199,17 +155,17 @@
         "ally": "ISSUE",
         "kills": 2,
         "deaths": 6
-      },
-      {
-        "nome": "Green Sekai",
-        "players": 10,
-        "ally": "BAN",
-        "kills": 1,
-        "deaths": 5
       }
     ],
     "vincitore": "EXALTED",
-    "ratti": 24
+    "ratti": 34
+  },
+  {
+    "id": 195850830,
+    "data": "2025-05-27T20:53:33.878018Z",
+    "gilde": [],
+    "vincitore": null,
+    "ratti": 3
   },
   {
     "id": 195850775,
@@ -221,16 +177,9 @@
         "ally": "POST",
         "kills": 1,
         "deaths": 1
-      },
-      {
-        "nome": "Les Zouloux Veineux",
-        "players": 23,
-        "ally": "NoAlliance",
-        "kills": 4,
-        "deaths": 2
       }
     ],
-    "vincitore": "Les Zouloux Veineux",
+    "vincitore": "ONE-TARGET",
     "ratti": 6
   },
   {
@@ -287,13 +236,6 @@
         "ally": "POST",
         "kills": 7,
         "deaths": 0
-      },
-      {
-        "nome": "GachiBang",
-        "players": 13,
-        "ally": "NoAlliance",
-        "kills": 2,
-        "deaths": 13
       }
     ],
     "vincitore": "EXALTED",
@@ -322,6 +264,20 @@
     "ratti": 1
   },
   {
+    "id": 195838447,
+    "data": "2025-05-27T20:30:01.921981600Z",
+    "gilde": [],
+    "vincitore": null,
+    "ratti": 5
+  },
+  {
+    "id": 195829796,
+    "data": "2025-05-27T20:14:41.046103100Z",
+    "gilde": [],
+    "vincitore": null,
+    "ratti": 1
+  },
+  {
     "id": 195826563,
     "data": "2025-05-27T20:09:55.613955Z",
     "gilde": [
@@ -342,28 +298,6 @@
     ],
     "vincitore": "Inquisitors",
     "ratti": 3
-  },
-  {
-    "id": 195820654,
-    "data": "2025-05-27T19:59:06.278268600Z",
-    "gilde": [
-      {
-        "nome": "ORIGAMI",
-        "players": 10,
-        "ally": "YOKAI",
-        "kills": 1,
-        "deaths": 7
-      },
-      {
-        "nome": "GachiBang",
-        "players": 14,
-        "ally": "NoAlliance",
-        "kills": 10,
-        "deaths": 1
-      }
-    ],
-    "vincitore": "GachiBang",
-    "ratti": 4
   },
   {
     "id": 195820521,
@@ -397,16 +331,9 @@
         "ally": "RAGE",
         "kills": 3,
         "deaths": 9
-      },
-      {
-        "nome": "VINICIIII",
-        "players": 20,
-        "ally": "NoAlliance",
-        "kills": 9,
-        "deaths": 1
       }
     ],
-    "vincitore": "VINICIIII",
+    "vincitore": "DOGWALKERS",
     "ratti": 27
   },
   {
@@ -463,16 +390,9 @@
         "ally": "666",
         "kills": 2,
         "deaths": 4
-      },
-      {
-        "nome": "O U T W A R D",
-        "players": 24,
-        "ally": "NoAlliance",
-        "kills": 4,
-        "deaths": 1
       }
     ],
-    "vincitore": "O U T W A R D",
+    "vincitore": "The Jackals",
     "ratti": 1
   },
   {
@@ -520,28 +440,6 @@
     "ratti": 2
   },
   {
-    "id": 195792350,
-    "data": "2025-05-27T19:16:04.839589500Z",
-    "gilde": [
-      {
-        "nome": "H O R I Z O N",
-        "players": 10,
-        "ally": "STM",
-        "kills": 3,
-        "deaths": 3
-      },
-      {
-        "nome": "G2U",
-        "players": 11,
-        "ally": "UA",
-        "kills": 5,
-        "deaths": 0
-      }
-    ],
-    "vincitore": "G2U",
-    "ratti": 17
-  },
-  {
     "id": 195791641,
     "data": "2025-05-27T19:09:08.005431100Z",
     "gilde": [
@@ -573,16 +471,9 @@
         "ally": "HIT",
         "kills": 0,
         "deaths": 13
-      },
-      {
-        "nome": "FAKE ENGAGE",
-        "players": 19,
-        "ally": "NoAlliance",
-        "kills": 13,
-        "deaths": 0
       }
     ],
-    "vincitore": "FAKE ENGAGE",
+    "vincitore": "Argent Dawn",
     "ratti": 0
   },
   {

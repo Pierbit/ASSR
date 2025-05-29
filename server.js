@@ -32,22 +32,6 @@ export function generaReportGilde(battaglie) {
             gildaCount[gilda.nome].numero_battaglie++;
             if(battaglia.vincitore === gilda.nome) gildaCount[gilda.nome].vittorie++;
         })
-
-        /*const battagliaStringa = JSON.stringify(battaglia);
-        const stringaPulita = battagliaStringa.replace(/\s+/g, ' ');
-
-        const regexNomiGilde = /"nome"\s*:\s*"([^"]+)"/g;
-        let match;
-
-        while ((match = regexNomiGilde.exec(stringaPulita)) !== null) {
-            const nome = match[1];
-            if (!gildaCount[nome]) {
-                gildaCount[nome] = {numero_battaglie: 0, vittorie: 0};
-            }
-            gildaCount[nome].numero_battaglie++;
-            if(battaglia.vincitore === nome) gildaCount[nome].vittorie++;
-        }*/
-
     });
 
     return gildaCount;
@@ -57,14 +41,17 @@ function mergeAllies(significantGuilds) {
     const allyMap = {};
 
     for (const [name, data] of significantGuilds) {
-        const ally = data.alliance || 'NoAlliance';
-        if (!allyMap[ally]) allyMap[ally] = [];
-        allyMap[ally].push([name, data]);
+        const hasAlly = data.alliance && data.alliance !== 'NoAlliance';
+        const key = hasAlly ? data.alliance : Symbol(name);
+        const readableAlly = hasAlly ? data.alliance : 'NoAlliance';
+
+        if (!allyMap[key]) allyMap[key] = { guilds: [], alliance: readableAlly };
+        allyMap[key].guilds.push([name, data]);
     }
 
     const mergedGuilds = [];
 
-    for (const [ally, guilds] of Object.entries(allyMap)) {
+    for (const { guilds, alliance } of Object.values(allyMap)) {
         if (guilds.length === 1) {
             mergedGuilds.push(guilds[0]);
         } else {
@@ -80,7 +67,7 @@ function mergeAllies(significantGuilds) {
                     kills: 0,
                     deaths: 0,
                     count: 0,
-                    alliance: ally
+                    alliance: alliance
                 }
             );
             mergedGuilds.push([mergedName, mergedData]);
@@ -89,6 +76,7 @@ function mergeAllies(significantGuilds) {
 
     return mergedGuilds;
 }
+
 
 async function fetchBattles() {
     console.log("Fetching battles...");
@@ -160,8 +148,28 @@ async function fetchBattles() {
 
 
                 const significantGuilds = Object.entries(guildMap)
-                    .filter(([_, data]) => data.count >= 10);
+                    .filter(([_, data]) => data.count >= 11);
+                /*if(significantGuilds.length === 1) {
+                    const insignificantGuilds = Object.entries(guildMap).filter(([_, data]) => (data.count >= 8 && data.count < 10));
+
+                }*/
                 if (significantGuilds.length < 2) return null;
+
+                const significantAlliances = new Set(
+                    significantGuilds
+                        .map(([_, data]) => data.alliance)
+                        .filter(ally => ally && ally !== 'NoAlliance')
+                );
+
+                const secondaryGuildsMatched = Object.entries(guildMap)
+                    .filter(([_, data]) => data.count <= 10 && significantAlliances.has(data.alliance))
+                    .map(([name, data]) => ({
+                        nome: name,
+                        players: data.count,
+                        ally: data.alliance,
+                        kills: data.kills,
+                        deaths: data.deaths
+                    }));
 
                 const mergedGuilds = mergeAllies(significantGuilds);
 
@@ -174,13 +182,21 @@ async function fetchBattles() {
                 const dominantAlly = Object.values(allianceCounts).some(count => count >= 25);
                 if (dominantAlly) return null;
 
+                const matchedNames = new Set(secondaryGuildsMatched.map(g => g.nome));
 
-                const secondaryGuilds = Object.entries(guildMap)
-                    .filter(([_, data]) => data.count < 10);
+                let participantsCount = 0;
+                Object.entries(guildMap)
+                    .filter(([name, data]) => data.count <= 10 && !matchedNames.has(name))
+                    .forEach(([_, data]) => {
+                        participantsCount += data.count;
+                    });
+
+                /*const secondaryGuilds = Object.entries(guildMap)
+                    .filter(([_, data]) => data.count < 11);
                 let participantsCount = 0;
                 for (let i = 0; i < secondaryGuilds.length; i++) {
                     participantsCount += secondaryGuilds[i][1].count;
-                }
+                }*/
 
                 let winner = null;
                 let maxKills = -1;
@@ -202,6 +218,7 @@ async function fetchBattles() {
                         deaths: data.deaths
                     })),
                     vincitore: winner,
+                    secondary: secondaryGuildsMatched,
                     ratti: participantsCount,
                 };
             })
