@@ -9,7 +9,7 @@ import {
     readLast14DailyBattleJson,
     insertComprehensiveReport,
     readComprehensiveReport,
-    deleteBattle
+    deleteBattle, readDailyBattleJsonApi
 } from "./queries.js";
 
 const app = express();
@@ -277,11 +277,20 @@ fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
+
+    const day = req.query.day;
+
     try{
-        res.json(await readDailyBattleJson());
+        if(day === "today"){
+            res.json(await readDailyBattleJsonApi(0));
+        } else if(day === "yesterday"){
+            res.json(await readDailyBattleJsonApi(1));
+        } else{
+            return res.status(400).json({ error: "Parametro 'day' mancante o invalido. Usa ?day=oggi o ?day=ieri" });
+        }
     }catch (err){
         console.log(err);
-        res.status(404).json({error: "Battles not found"});
+        res.status(500).json({error: "Battles not found"});
     }
 });
 

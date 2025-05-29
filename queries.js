@@ -17,6 +17,15 @@ export async function readDailyBattleJson() {
     }
 }
 
+export async function readDailyBattleJsonApi(offset) {
+    const result = await pool.query(`SELECT report FROM dailybattles ORDER BY id DESC OFFSET ${offset} LIMIT 1`);
+    if (result.rows.length === 0) {
+        return null;
+    } else {
+        return JSON.parse(result.rows[0].report);
+    }
+}
+
 export async function readLast14DailyBattleJson() {
     const result = await pool.query('SELECT report FROM dailybattles ORDER BY id DESC LIMIT 14');
     return result.rows.map(row => JSON.parse(row.report));
