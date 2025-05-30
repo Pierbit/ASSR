@@ -300,8 +300,8 @@ async function fetchBattles() {
 }
 
 setInterval(fetchBattles, 18000000); // 5 hours
+setInterval(console.clear, 21600000); //6 hours
 fetchBattles();
-console.clear();
 
 
 app.get('/api/battles/day', async (req, res) => {
