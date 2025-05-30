@@ -101,14 +101,26 @@ async function fetchBattles() {
             let matched = 0;
 
             const now = new Date();
-            const yesterday = new Date(now);
-            yesterday.setUTCDate(now.getUTCDate() - 1);
-            yesterday.setUTCHours(0, 0, 0, 0);
 
-            const startWindow = new Date(yesterday);
-            startWindow.setUTCHours(19, 0, 0, 0);
-            const endWindow = new Date(yesterday);
-            endWindow.setUTCHours(21, 59, 59, 999);
+            const yesterdayUTC = new Date(Date.UTC(
+                now.getUTCFullYear(),
+                now.getUTCMonth(),
+                now.getUTCDate() - 1
+            ));
+
+            const startWindow = new Date(Date.UTC(
+                yesterdayUTC.getUTCFullYear(),
+                yesterdayUTC.getUTCMonth(),
+                yesterdayUTC.getUTCDate(),
+                19, 0, 0, 0
+            ));
+
+            const endWindow = new Date(Date.UTC(
+                yesterdayUTC.getUTCFullYear(),
+                yesterdayUTC.getUTCMonth(),
+                yesterdayUTC.getUTCDate(),
+                21, 59, 59, 999
+            ));
 
             for (const battle of data) {
                 const battleDate = new Date(battle.startTime);
@@ -272,8 +284,8 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 18000000); //5 ore
-fetchBattles();
+setInterval(fetchBattles, 3000000); //50 min
+//fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
