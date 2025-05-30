@@ -144,15 +144,6 @@ async function fetchBattles() {
                 ) {
                     console.log(`   ✅ MATCHED -> Battle added to collected.\n`);
                     collected.push(battle);
-                } else {
-                    console.log(`   ❌ SKIPPED -> Reason(s):`);
-                    if (battleDate < startWindow || battleDate > endWindow) {
-                        console.log(`      - Outside time window (${startWindow.toISOString()} - ${endWindow.toISOString()})`);
-                    }
-                    if (totalPlayers < 25 || totalPlayers > 60) {
-                        console.log(`      - Player count not in range (25–60) -> Got: ${totalPlayers}`);
-                    }
-                    console.log(); // blank line between battles
                 }
             }
 
