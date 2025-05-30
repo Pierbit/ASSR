@@ -82,7 +82,7 @@ async function fetchBattles() {
     console.log("Fetching battles...");
     let collected = [];
     let offset = 0;
-    const limit = 51;
+    const limit = 50;
     let stop = false;
     const data_temp = new Date().toISOString();
     console.log("DATA TEMP: "+data_temp);

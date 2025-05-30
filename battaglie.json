@@ -1,446 +1,547 @@
 [
   {
-    "id": 195882157,
-    "data": "2025-05-27T21:59:30.970207500Z",
+    "id": 196794428,
+    "data": "2025-05-29T21:48:43.021523600Z",
     "gilde": [
       {
-        "nome": "Kanalize",
-        "players": 16,
-        "ally": "N0VA",
-        "kills": 0,
-        "deaths": 16
-      },
-      {
-        "nome": "Argent Dawn",
+        "nome": "GLI STIRATI",
         "players": 14,
-        "ally": "HIT",
-        "kills": 13,
-        "deaths": 0
-      }
-    ],
-    "vincitore": "Argent Dawn",
-    "secondary": [
-      {
-        "nome": "REFAKERITOS",
-        "players": 10,
-        "ally": "HIT",
-        "kills": 9,
-        "deaths": 0
-      },
-      {
-        "nome": "Kiddie Gang",
-        "players": 6,
-        "ally": "N0VA",
-        "kills": 0,
-        "deaths": 6
-      }
-    ],
-    "ratti": 0
-  },
-  {
-    "id": 195866072,
-    "data": "2025-05-27T21:25:16.607425900Z",
-    "gilde": [
-      {
-        "nome": "NO META",
-        "players": 14,
-        "ally": "SWAP",
-        "kills": 10,
-        "deaths": 3
-      },
-      {
-        "nome": "Solea",
-        "players": 17,
-        "ally": "POST",
-        "kills": 6,
-        "deaths": 12
-      }
-    ],
-    "vincitore": "NO META",
-    "secondary": [],
-    "ratti": 8
-  },
-  {
-    "id": 195857759,
-    "data": "2025-05-27T21:06:19.574323300Z",
-    "gilde": [
-      {
-        "nome": "EXALTED",
-        "players": 13,
-        "ally": "POST",
-        "kills": 4,
-        "deaths": 1
-      },
-      {
-        "nome": "INQUISITION",
-        "players": 12,
-        "ally": "ISSUE",
-        "kills": 1,
-        "deaths": 8
-      },
-      {
-        "nome": "Antrax Army",
-        "players": 13,
         "ally": "FISCO",
-        "kills": 4,
-        "deaths": 5
-      }
-    ],
-    "vincitore": "EXALTED",
-    "secondary": [
-      {
-        "nome": "Suicid3 Squad",
-        "players": 5,
-        "ally": "FISCO",
-        "kills": 0,
-        "deaths": 2
-      }
-    ],
-    "ratti": 8
-  },
-  {
-    "id": 195855379,
-    "data": "2025-05-27T21:03:39.304565900Z",
-    "gilde": [
-      {
-        "nome": "Yum Yum",
-        "players": 12,
-        "ally": "FPV",
         "kills": 2,
-        "deaths": 10
+        "deaths": 20
       },
       {
-        "nome": "Noxus",
-        "players": 20,
-        "ally": "XX",
-        "kills": 2,
+        "nome": "LEAN",
+        "players": 12,
+        "ally": "ON",
+        "kills": 21,
         "deaths": 0
       }
     ],
-    "vincitore": "Yum Yum",
-    "secondary": [],
-    "ratti": 13
-  },
-  {
-    "id": 195853088,
-    "data": "2025-05-27T20:58:53.140498200Z",
-    "gilde": [
-      {
-        "nome": "EXALTED",
-        "players": 13,
-        "ally": "POST",
-        "kills": 5,
-        "deaths": 1
-      },
-      {
-        "nome": "INQUISITION",
-        "players": 12,
-        "ally": "ISSUE",
-        "kills": 2,
-        "deaths": 6
-      }
-    ],
-    "vincitore": "EXALTED",
-    "secondary": [],
-    "ratti": 34
-  },
-  {
-    "id": 195844733,
-    "data": "2025-05-27T20:41:02.673377100Z",
-    "gilde": [
-      {
-        "nome": "Telecinco",
-        "players": 21,
-        "ally": "R3D",
-        "kills": 2,
-        "deaths": 17
-      },
-      {
-        "nome": "Il Covo",
-        "players": 20,
-        "ally": "RELAX",
-        "kills": 14,
-        "deaths": 2
-      }
-    ],
-    "vincitore": "Il Covo",
-    "secondary": [],
-    "ratti": 1
-  },
-  {
-    "id": 195844413,
-    "data": "2025-05-27T20:40:47.463734Z",
-    "gilde": [
-      {
-        "nome": "Bohem",
-        "players": 20,
-        "ally": "SOAP",
-        "kills": 2,
-        "deaths": 1
-      },
-      {
-        "nome": "W R A I T H",
-        "players": 20,
-        "ally": "ISSUE",
-        "kills": 1,
-        "deaths": 2
-      }
-    ],
-    "vincitore": "Bohem",
-    "secondary": [],
-    "ratti": 0
-  },
-  {
-    "id": 195839620,
-    "data": "2025-05-27T20:30:57.493770Z",
-    "gilde": [
-      {
-        "nome": "Crescendo",
-        "players": 19,
-        "ally": "BRUH",
-        "kills": 12,
-        "deaths": 2
-      },
-      {
-        "nome": "Solea",
-        "players": 17,
-        "ally": "POST",
-        "kills": 2,
-        "deaths": 12
-      }
-    ],
-    "vincitore": "Crescendo",
-    "secondary": [],
-    "ratti": 1
-  },
-  {
-    "id": 195826563,
-    "data": "2025-05-27T20:09:55.613955Z",
-    "gilde": [
-      {
-        "nome": "Inquisitors",
-        "players": 19,
-        "ally": "FD2D",
-        "kills": 5,
-        "deaths": 0
-      },
-      {
-        "nome": "No Skills",
-        "players": 19,
-        "ally": "NGU",
-        "kills": 1,
-        "deaths": 6
-      }
-    ],
-    "vincitore": "Inquisitors",
+    "vincitore": "LEAN",
     "secondary": [],
     "ratti": 3
   },
   {
-    "id": 195820521,
-    "data": "2025-05-27T19:57:10.884090100Z",
+    "id": 196788302,
+    "data": "2025-05-29T21:28:44.221417400Z",
     "gilde": [
       {
-        "nome": "Vendetta",
-        "players": 18,
-        "ally": "RAGE",
-        "kills": 2,
-        "deaths": 11
+        "nome": "Les Rats",
+        "players": 20,
+        "ally": "GYAT",
+        "kills": 1,
+        "deaths": 0
       },
       {
-        "nome": "TEAM SUPREMACY",
+        "nome": "C I N G H I A L E",
         "players": 18,
-        "ally": "RAVEN",
-        "kills": 12,
-        "deaths": 2
-      }
-    ],
-    "vincitore": "TEAM SUPREMACY",
-    "secondary": [
-      {
-        "nome": "Anaconda",
-        "players": 1,
-        "ally": "RAGE",
-        "kills": 0,
+        "ally": "CCd",
+        "kills": 2,
         "deaths": 1
       }
     ],
-    "ratti": 0
-  },
-  {
-    "id": 195815265,
-    "data": "2025-05-27T19:49:25.089584Z",
-    "gilde": [
-      {
-        "nome": "DOGWALKERS",
-        "players": 12,
-        "ally": "RAGE",
-        "kills": 4,
-        "deaths": 9
-      },
-      {
-        "nome": "Il Covo",
-        "players": 17,
-        "ally": "RELAX",
-        "kills": 8,
-        "deaths": 3
-      }
-    ],
-    "vincitore": "Il Covo",
-    "secondary": [],
-    "ratti": 1
-  },
-  {
-    "id": 195805695,
-    "data": "2025-05-27T19:31:59.961642800Z",
-    "gilde": [
-      {
-        "nome": "Destiny",
-        "players": 16,
-        "ally": "R3D",
-        "kills": 3,
-        "deaths": 10
-      },
-      {
-        "nome": "Savants",
-        "players": 18,
-        "ally": "MASS",
-        "kills": 11,
-        "deaths": 3
-      }
-    ],
-    "vincitore": "Savants",
-    "secondary": [],
-    "ratti": 1
-  },
-  {
-    "id": 195797919,
-    "data": "2025-05-27T19:19:26.825911Z",
-    "gilde": [
-      {
-        "nome": "T-Bank Arbitrage",
-        "players": 18,
-        "ally": "P2P",
-        "kills": 2,
-        "deaths": 7
-      },
-      {
-        "nome": "Latwo Poszlo",
-        "players": 18,
-        "ally": "DB",
-        "kills": 7,
-        "deaths": 1
-      }
-    ],
-    "vincitore": "Latwo Poszlo",
+    "vincitore": "C I N G H I A L E",
     "secondary": [],
     "ratti": 4
   },
   {
-    "id": 195796925,
-    "data": "2025-05-27T19:20:17.293913500Z",
+    "id": 196782943,
+    "data": "2025-05-29T21:23:47.680078300Z",
+    "gilde": [
+      {
+        "nome": "Anaconda",
+        "players": 13,
+        "ally": "RAGE",
+        "kills": 25,
+        "deaths": 0
+      },
+      {
+        "nome": "Os Viriatos",
+        "players": 11,
+        "ally": "ND",
+        "kills": 1,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "Anaconda",
+    "secondary": [],
+    "ratti": 6
+  },
+  {
+    "id": 196777533,
+    "data": "2025-05-29T21:10:40.052216600Z",
+    "gilde": [
+      {
+        "nome": "WHY NOT",
+        "players": 14,
+        "ally": "hIKE2",
+        "kills": 5,
+        "deaths": 11
+      },
+      {
+        "nome": "Scourge of GOD",
+        "players": 13,
+        "ally": "DIOR",
+        "kills": 10,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "Scourge of GOD",
+    "secondary": [
+      {
+        "nome": "We Are",
+        "players": 1,
+        "ally": "DIOR",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 3
+  },
+  {
+    "id": 196775778,
+    "data": "2025-05-29T21:03:56.585667200Z",
+    "gilde": [
+      {
+        "nome": "Les Rats",
+        "players": 20,
+        "ally": "GYAT",
+        "kills": 5,
+        "deaths": 0
+      },
+      {
+        "nome": "C I N G H I A L E",
+        "players": 18,
+        "ally": "CCd",
+        "kills": 3,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Les Rats",
+    "secondary": [],
+    "ratti": 10
+  },
+  {
+    "id": 196774989,
+    "data": "2025-05-29T21:04:44.799720Z",
+    "gilde": [
+      {
+        "nome": "Solea",
+        "players": 21,
+        "ally": "POST",
+        "kills": 20,
+        "deaths": 1
+      },
+      {
+        "nome": "The Monkeys of Avalon",
+        "players": 11,
+        "ally": "BAN",
+        "kills": 1,
+        "deaths": 10
+      },
+      {
+        "nome": "Ebanfall",
+        "players": 15,
+        "ally": "BRUH",
+        "kills": 1,
+        "deaths": 7
+      }
+    ],
+    "vincitore": "Solea",
+    "secondary": [
+      {
+        "nome": "Green Sekai",
+        "players": 5,
+        "ally": "BAN",
+        "kills": 0,
+        "deaths": 4
+      }
+    ],
+    "ratti": 3
+  },
+  {
+    "id": 196773270,
+    "data": "2025-05-29T20:58:13.422025200Z",
+    "gilde": [
+      {
+        "nome": "Antrax Army",
+        "players": 12,
+        "ally": "FISCO",
+        "kills": 10,
+        "deaths": 1
+      },
+      {
+        "nome": "No Skills",
+        "players": 12,
+        "ally": "NGU",
+        "kills": 1,
+        "deaths": 12
+      }
+    ],
+    "vincitore": "Antrax Army",
+    "secondary": [
+      {
+        "nome": "Suicid3 Squad",
+        "players": 1,
+        "ally": "FISCO",
+        "kills": 1,
+        "deaths": 0
+      }
+    ],
+    "ratti": 3
+  },
+  {
+    "id": 196772251,
+    "data": "2025-05-29T20:55:55.623936500Z",
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 11,
+        "ally": "SWAP",
+        "kills": 4,
+        "deaths": 0
+      },
+      {
+        "nome": "Kiss or Spank",
+        "players": 11,
+        "ally": "PW",
+        "kills": 0,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "NO META",
+    "secondary": [],
+    "ratti": 7
+  },
+  {
+    "id": 196772025,
+    "data": "2025-05-29T20:55:53.205188700Z",
+    "gilde": [
+      {
+        "nome": "Les Rats",
+        "players": 20,
+        "ally": "GYAT",
+        "kills": 2,
+        "deaths": 0
+      },
+      {
+        "nome": "Il Covo",
+        "players": 18,
+        "ally": "RELAX",
+        "kills": 1,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "Les Rats",
+    "secondary": [],
+    "ratti": 1
+  },
+  {
+    "id": 196770300,
+    "data": "2025-05-29T20:54:04.591144200Z",
+    "gilde": [
+      {
+        "nome": "Alcyon",
+        "players": 15,
+        "ally": "NGU",
+        "kills": 0,
+        "deaths": 15
+      },
+      {
+        "nome": "Nation of Elites",
+        "players": 22,
+        "ally": "VLR",
+        "kills": 15,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Nation of Elites",
+    "secondary": [],
+    "ratti": 0
+  },
+  {
+    "id": 196734683,
+    "data": "2025-05-29T19:53:40.680070800Z",
+    "gilde": [
+      {
+        "nome": "FR DREAM ACADEMY FR",
+        "players": 15,
+        "ally": "URSS",
+        "kills": 4,
+        "deaths": 8
+      },
+      {
+        "nome": "No Skills",
+        "players": 13,
+        "ally": "NGU",
+        "kills": 8,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "No Skills",
+    "secondary": [],
+    "ratti": 16
+  },
+  {
+    "id": 196731530,
+    "data": "2025-05-29T19:48:28.945010600Z",
     "gilde": [
       {
         "nome": "Destiny",
-        "players": 17,
+        "players": 24,
         "ally": "R3D",
-        "kills": 9,
-        "deaths": 2
+        "kills": 28,
+        "deaths": 0
       },
       {
-        "nome": "Savants",
-        "players": 17,
-        "ally": "MASS",
-        "kills": 2,
-        "deaths": 9
+        "nome": "Provoked",
+        "players": 14,
+        "ally": "CCd",
+        "kills": 0,
+        "deaths": 14
       }
     ],
     "vincitore": "Destiny",
     "secondary": [
       {
-        "nome": "Polska Gildia",
-        "players": 1,
-        "ally": "MASS",
+        "nome": "Potatos",
+        "players": 4,
+        "ally": "CCd",
         "kills": 0,
-        "deaths": 1
-      }
-    ],
-    "ratti": 1
-  },
-  {
-    "id": 195791641,
-    "data": "2025-05-27T19:09:08.005431100Z",
-    "gilde": [
-      {
-        "nome": "Destiny",
-        "players": 18,
-        "ally": "R3D",
-        "kills": 4,
-        "deaths": 2
-      },
-      {
-        "nome": "Savants",
-        "players": 18,
-        "ally": "MASS",
-        "kills": 2,
         "deaths": 4
       }
     ],
-    "vincitore": "Destiny",
+    "ratti": 15
+  },
+  {
+    "id": 196721999,
+    "data": "2025-05-29T19:26:07.276620500Z",
+    "gilde": [
+      {
+        "nome": "The Jackals",
+        "players": 20,
+        "ally": "666",
+        "kills": 4,
+        "deaths": 6
+      },
+      {
+        "nome": "Insane",
+        "players": 18,
+        "ally": "RAGE",
+        "kills": 6,
+        "deaths": 4
+      }
+    ],
+    "vincitore": "Insane",
     "secondary": [],
     "ratti": 0
   },
   {
-    "id": 195789081,
-    "data": "2025-05-27T19:02:54.827013200Z",
+    "id": 196718351,
+    "data": "2025-05-29T19:19:09.349964100Z",
     "gilde": [
       {
-        "nome": "Ebanfall",
-        "players": 20,
-        "ally": "BRUH",
+        "nome": "VVolfpack",
+        "players": 24,
+        "ally": "BOOH",
         "kills": 1,
-        "deaths": 7
+        "deaths": 14
       },
       {
-        "nome": "W R A I T H",
+        "nome": "Treasure Hunt",
         "players": 20,
-        "ally": "ISSUE",
-        "kills": 7,
+        "ally": "JOIN",
+        "kills": 13,
         "deaths": 1
       }
     ],
-    "vincitore": "W R A I T H",
+    "vincitore": "Treasure Hunt",
+    "secondary": [],
+    "ratti": 1
+  },
+  {
+    "id": 196718056,
+    "data": "2025-05-29T19:21:45.526137200Z",
+    "gilde": [
+      {
+        "nome": "ANNEXIA",
+        "players": 17,
+        "ally": "DIOR",
+        "kills": 5,
+        "deaths": 0
+      },
+      {
+        "nome": "E L I T E",
+        "players": 13,
+        "ally": "PRADA",
+        "kills": 1,
+        "deaths": 4
+      }
+    ],
+    "vincitore": "ANNEXIA",
+    "secondary": [
+      {
+        "nome": "ThePharaohs",
+        "players": 5,
+        "ally": "PRADA",
+        "kills": 1,
+        "deaths": 0
+      }
+    ],
+    "ratti": 4
+  },
+  {
+    "id": 196716223,
+    "data": "2025-05-29T19:15:00.274926700Z",
+    "gilde": [
+      {
+        "nome": "The Jackals",
+        "players": 21,
+        "ally": "666",
+        "kills": 4,
+        "deaths": 3
+      },
+      {
+        "nome": "Insane",
+        "players": 19,
+        "ally": "RAGE",
+        "kills": 3,
+        "deaths": 4
+      }
+    ],
+    "vincitore": "The Jackals",
     "secondary": [],
     "ratti": 0
   },
   {
-    "id": 195788461,
-    "data": "2025-05-27T19:04:01.780950400Z",
+    "id": 196714332,
+    "data": "2025-05-29T19:10:41.411577500Z",
     "gilde": [
       {
-        "nome": "T-Bank Arbitrage",
-        "players": 19,
-        "ally": "P2P",
-        "kills": 11,
-        "deaths": 7
+        "nome": "ANNEXIA",
+        "players": 17,
+        "ally": "DIOR",
+        "kills": 6,
+        "deaths": 0
       },
       {
-        "nome": "EXALTED",
+        "nome": "E L I T E",
         "players": 13,
-        "ally": "POST",
-        "kills": 4,
+        "ally": "PRADA",
+        "kills": 1,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "ANNEXIA",
+    "secondary": [],
+    "ratti": 6
+  },
+  {
+    "id": 196713910,
+    "data": "2025-05-29T19:10:36.814023600Z",
+    "gilde": [
+      {
+        "nome": "Argent Dawn",
+        "players": 16,
+        "ally": "HIT",
+        "kills": 13,
+        "deaths": 2
+      },
+      {
+        "nome": "Faith And Steel",
+        "players": 16,
+        "ally": "FwB",
+        "kills": 2,
+        "deaths": 13
+      }
+    ],
+    "vincitore": "Argent Dawn",
+    "secondary": [],
+    "ratti": 0
+  },
+  {
+    "id": 196713211,
+    "data": "2025-05-29T19:10:02.536109200Z",
+    "gilde": [
+      {
+        "nome": "Antipositive",
+        "players": 11,
+        "ally": "NC",
+        "kills": 1,
         "deaths": 1
       },
       {
-        "nome": "Latwo Poszlo",
-        "players": 19,
-        "ally": "DB",
+        "nome": "GORILLAZ",
+        "players": 12,
+        "ally": "WNB",
+        "kills": 1,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Antipositive",
+    "secondary": [
+      {
+        "nome": "GORILLAZ GYM",
+        "players": 3,
+        "ally": "WNB",
+        "kills": 0,
+        "deaths": 0
+      },
+      {
+        "nome": "MALYUTKI",
+        "players": 2,
+        "ally": "NC",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 8
+  },
+  {
+    "id": 196712612,
+    "data": "2025-05-29T19:09:48.032768600Z",
+    "gilde": [
+      {
+        "nome": "INSENSATOS",
+        "players": 21,
+        "ally": "BRUH",
+        "kills": 3,
+        "deaths": 13
+      },
+      {
+        "nome": "BOYZ",
+        "players": 21,
+        "ally": "GOOD",
+        "kills": 14,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "BOYZ",
+    "secondary": [],
+    "ratti": 2
+  },
+  {
+    "id": 196711350,
+    "data": "2025-05-29T19:06:04.045018700Z",
+    "gilde": [
+      {
+        "nome": "AFewGoodMen",
+        "players": 13,
+        "ally": "VALOR",
+        "kills": 3,
+        "deaths": 1
+      },
+      {
+        "nome": "WIPEEE",
+        "players": 13,
+        "ally": "GOOD",
         "kills": 1,
         "deaths": 8
       }
     ],
-    "vincitore": "T-Bank Arbitrage",
+    "vincitore": "AFewGoodMen",
     "secondary": [],
-    "ratti": 8
+    "ratti": 1
   }
 ]
