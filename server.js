@@ -298,8 +298,8 @@ async function fetchBattles() {
 }
 
 
-setInterval(fetchBattles, 2400000); //40 min
-//fetchBattles();
+setInterval(fetchBattles, 18000000); // 5 hours
+fetchBattles();
 
 
 app.get('/api/battles/day', async (req, res) => {
