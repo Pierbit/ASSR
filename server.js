@@ -84,6 +84,8 @@ async function fetchBattles() {
     let offset = 0;
     const limit = 51;
     let stop = false;
+    const data_temp = new Date().toISOString();
+    console.log("DATA TEMP: "+data_temp);
     //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
