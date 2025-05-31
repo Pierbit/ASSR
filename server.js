@@ -86,7 +86,7 @@ async function fetchBattles() {
     let stop = false;
     const data_temp = new Date().toISOString();
     console.log("DATA TEMP: "+data_temp);
-    deleteBattle(); //PER CANCELLARE modificare id
+    //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
         const now = Date.now();
@@ -296,7 +296,7 @@ async function fetchBattles() {
     }
 }
 
-setInterval(fetchBattles, 18000000); // 5 hours
+setInterval(fetchBattles, 54000000); // 15 hours
 fetchBattles();
 
 
