@@ -85,11 +85,12 @@ async function fetchBattles() {
     const limit = 50;
     let stop = false;
     const data_temp = new Date().toISOString();
+    const now = Date.now();
     console.log("DATA TEMP: "+data_temp);
     //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
-        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent`;
+        const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent&_=${now}`;
         console.log(`\n========== FETCHING BATTLES (offset: ${offset}) ==========\n`);
         console.log(`URL: ${url}`);
 
@@ -132,9 +133,12 @@ async function fetchBattles() {
                 const battleDate = new Date(battle.startTime);
                 const totalPlayers = Object.keys(battle.players || {}).length;
 
-                console.log(`-- Battle ID: ${battle.id}`);
-                console.log(`   Start: ${battleDate.toISOString()}`);
-                console.log(`   Players: ${totalPlayers}`);
+
+                if(offset <= 500) {
+                    console.log(`-- Battle ID: ${battle.id}`);
+                    console.log(`   Start: ${battleDate.toISOString()}`);
+                    console.log(`   Players: ${totalPlayers}`);
+                }
 
                 if (
                     battleDate >= startWindow &&
@@ -291,7 +295,6 @@ async function fetchBattles() {
 }
 
 setInterval(fetchBattles, 18000000); // 5 hours
-setInterval(console.clear, 21600000); //6 hours
 fetchBattles();
 
 
