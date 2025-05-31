@@ -86,7 +86,7 @@ async function fetchBattles() {
     let stop = false;
     const data_temp = new Date().toISOString();
     console.log("DATA TEMP: "+data_temp);
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
         const now = Date.now();
@@ -250,7 +250,8 @@ async function fetchBattles() {
                     vincitore: winner,
                     secondary: secondaryGuildsMatched,
                     ratti: participantsCount,
-                    fama: battle.totalFame
+                    fama: battle.totalFame,
+                    killsTotali: battle.totalKills
                 };
             })
             .filter(b => b && Array.isArray(b.gilde) && b.gilde.length > 0 && b.vincitore);
