@@ -85,11 +85,11 @@ async function fetchBattles() {
     const limit = 50;
     let stop = false;
     const data_temp = new Date().toISOString();
-    const now = Date.now();
     console.log("DATA TEMP: "+data_temp);
     //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
+        const now = Date.now();
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent&_=${now}`;
         console.log(`\n========== FETCHING BATTLES (offset: ${offset}) ==========\n`);
         console.log(`URL: ${url}`);
