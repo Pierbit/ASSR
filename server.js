@@ -132,10 +132,11 @@ async function fetchBattles() {
                 const battleDate = new Date(battle.startTime);
                 const totalPlayers = Object.keys(battle.players || {}).length;
 
-                console.log(`-- Battle ID: ${battle.id}`);
+                /*console.log(`-- Battle ID: ${battle.id}`);
                 console.log(`   Start: ${battleDate.toISOString()}`);
-                console.log(`   Players: ${totalPlayers}`);
+                console.log(`   Players: ${totalPlayers}`);*/
 
+                console.log(startWindow+" cazzi "+endWindow);
                 if (
                     battleDate >= startWindow &&
                     battleDate <= endWindow &&
