@@ -85,7 +85,7 @@ async function fetchBattles() {
     const limit = 50;
     let stop = false;
     const data_temp = new Date().toISOString();
-    console.log("DATA TEMP: "+data_temp);
+    //console.log("DATA TEMP: "+data_temp);
     //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
@@ -96,7 +96,7 @@ async function fetchBattles() {
 
         try {
             const res = await fetch(url);
-            console.log(`Status: ${res.status}`);
+            //console.log(`Status: ${res.status}`);
 
             if (!res.ok) {
                 console.warn(`[!] Response not OK. Skipping batch.`);
@@ -105,7 +105,7 @@ async function fetchBattles() {
             }
 
             const data = await res.json();
-            console.log(`Fetched ${data.length} battles.\n`);
+            //console.log(`Fetched ${data.length} battles.\n`);
 
             const now = new Date();
 
