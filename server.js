@@ -91,8 +91,8 @@ async function fetchBattles() {
     while (offset < 3000) {
         const now = Date.now();
         const url = `https://gameinfo-ams.albiononline.com/api/gameinfo/battles?limit=${limit}&offset=${offset}&sort=recent&_=${now}`;
-        console.log(`\n========== FETCHING BATTLES (offset: ${offset}) ==========\n`);
-        console.log(`URL: ${url}`);
+        //console.log(`\n========== FETCHING BATTLES (offset: ${offset}) ==========\n`);
+        //console.log(`URL: ${url}`);
 
         try {
             const res = await fetch(url);
@@ -134,11 +134,11 @@ async function fetchBattles() {
                 const totalPlayers = Object.keys(battle.players || {}).length;
 
 
-                if(offset <= 500) {
+                /*if(offset <= 500) {
                     console.log(`-- Battle ID: ${battle.id}`);
                     console.log(`   Start: ${battleDate.toISOString()}`);
                     console.log(`   Players: ${totalPlayers}`);
-                }
+                }*/
 
                 if (
                     battleDate >= startWindow &&
@@ -146,7 +146,7 @@ async function fetchBattles() {
                     totalPlayers >= 25 &&
                     totalPlayers <= 60
                 ) {
-                    console.log(`   ✅ MATCHED -> Battle added to collected.\n`);
+                    //console.log(`   ✅ MATCHED -> Battle added to collected.\n`);
                     collected.push(battle);
                 }
             }
@@ -296,7 +296,7 @@ async function fetchBattles() {
     }
 }
 
-setInterval(fetchBattles, 54000000); // 15 hours
+setInterval(fetchBattles, 86400000); // 24 hours
 fetchBattles();
 
 
