@@ -42,7 +42,7 @@ function mergeAllies(significantGuilds) {
 
     for (const [name, data] of significantGuilds) {
         const hasAlly = data.alliance && data.alliance !== 'NoAlliance';
-        const key = hasAlly ? data.alliance : Symbol(name);
+        const key = hasAlly ? data.alliance : name;
         const readableAlly = hasAlly ? data.alliance : 'NoAlliance';
 
         if (!allyMap[key]) allyMap[key] = { guilds: [], alliance: readableAlly };
@@ -86,7 +86,7 @@ async function fetchBattles() {
     let stop = false;
     const data_temp = new Date().toISOString();
     //console.log("DATA TEMP: "+data_temp);
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
         const now = Date.now();
@@ -179,19 +179,29 @@ async function fetchBattles() {
                 });
 
 
+                let tempGuilds = Object.entries(guildMap);
                 const significantGuilds = Object.entries(guildMap)
                     .filter(([_, data]) => data.count >= 11);
 
-                if (significantGuilds.length < 2) return null;
+                if(significantGuilds.length === 1) {
+                    tempGuilds = tempGuilds.filter(([key]) => key !== significantGuilds[0][0]);
+                    //console.log(significantGuilds[0][0])
+                }else if(significantGuilds.length < 1) {
+                    return null;
+                }
 
-                const significantAlliances = new Set(
+                const eligibleAlliances = new Set(
                     significantGuilds
-                        .map(([_, data]) => data.alliance)
-                        .filter(ally => ally && ally !== 'NoAlliance')
+                        .map(([_, data]) => data.alliance || 'NoAlliance') // Include NoAlliance
                 );
 
                 const secondaryGuildsMatched = Object.entries(guildMap)
-                    .filter(([_, data]) => data.count <= 10 && significantAlliances.has(data.alliance))
+                    .filter(([_, data]) =>
+                        data.count <= 10 &&
+                        data.alliance &&
+                        data.alliance !== 'NoAlliance' &&
+                        eligibleAlliances.has(data.alliance)
+                    )
                     .map(([name, data]) => ({
                         nome: name,
                         players: data.count,

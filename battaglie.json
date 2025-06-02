@@ -1,5 +1,63 @@
 [
   {
+    "id": 198276275,
+    "data": "2025-06-01T22:06:09.727201400Z",
+    "gilde": [
+      {
+        "nome": "Torgnoles et Grabuge",
+        "players": 14,
+        "ally": "BIS",
+        "kills": 2,
+        "deaths": 0
+      },
+      {
+        "nome": "Unbound",
+        "players": 12,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Torgnoles et Grabuge",
+    "secondary": [
+      {
+        "nome": "Les Nomades du Savoir",
+        "players": 5,
+        "ally": "BIS",
+        "kills": 3,
+        "deaths": 1
+      }
+    ],
+    "ratti": 20,
+    "fama": 714722,
+    "killsTotali": 14
+  },
+  {
+    "id": 198252016,
+    "data": "2025-06-01T21:03:21.890613600Z",
+    "gilde": [
+      {
+        "nome": "Il Covo",
+        "players": 16,
+        "ally": "RELAX",
+        "kills": 12,
+        "deaths": 2
+      },
+      {
+        "nome": "Gatitos Furiosos",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "Il Covo",
+    "secondary": [],
+    "ratti": 1,
+    "fama": 5760612,
+    "killsTotali": 14
+  },
+  {
     "id": 198251133,
     "data": "2025-06-01T21:00:48.337297300Z",
     "gilde": [
@@ -128,6 +186,31 @@
     "ratti": 4,
     "fama": 2389306,
     "killsTotali": 11
+  },
+  {
+    "id": 198240201,
+    "data": "2025-06-01T20:40:29.606659100Z",
+    "gilde": [
+      {
+        "nome": "VINICIIII",
+        "players": 23,
+        "ally": "NoAlliance",
+        "kills": 12,
+        "deaths": 4
+      },
+      {
+        "nome": "C I N G H I A L E",
+        "players": 19,
+        "ally": "CCd",
+        "kills": 4,
+        "deaths": 12
+      }
+    ],
+    "vincitore": "VINICIIII",
+    "secondary": [],
+    "ratti": 0,
+    "fama": 5375561,
+    "killsTotali": 16
   },
   {
     "id": 198239906,
@@ -263,6 +346,81 @@
     "killsTotali": 4
   },
   {
+    "id": 198221910,
+    "data": "2025-06-01T20:07:29.229296400Z",
+    "gilde": [
+      {
+        "nome": "ACADEMI",
+        "players": 24,
+        "ally": "NoAlliance",
+        "kills": 11,
+        "deaths": 0
+      },
+      {
+        "nome": "Elders Enclave",
+        "players": 11,
+        "ally": "IGNIS",
+        "kills": 0,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "ACADEMI",
+    "secondary": [],
+    "ratti": 0,
+    "fama": 2128809,
+    "killsTotali": 11
+  },
+  {
+    "id": 198214906,
+    "data": "2025-06-01T19:56:19.332841400Z",
+    "gilde": [
+      {
+        "nome": "VINICIIII",
+        "players": 21,
+        "ally": "NoAlliance",
+        "kills": 13,
+        "deaths": 4
+      },
+      {
+        "nome": "Prosektorium",
+        "players": 14,
+        "ally": "FwB",
+        "kills": 5,
+        "deaths": 14
+      }
+    ],
+    "vincitore": "VINICIIII",
+    "secondary": [],
+    "ratti": 2,
+    "fama": 2952300,
+    "killsTotali": 19
+  },
+  {
+    "id": 198201680,
+    "data": "2025-06-01T19:34:05.845995600Z",
+    "gilde": [
+      {
+        "nome": "Echoing Souls",
+        "players": 20,
+        "ally": "NoAlliance",
+        "kills": 11,
+        "deaths": 4
+      },
+      {
+        "nome": "ONE-TARGET",
+        "players": 15,
+        "ally": "POST",
+        "kills": 4,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "Echoing Souls",
+    "secondary": [],
+    "ratti": 0,
+    "fama": 4174267,
+    "killsTotali": 15
+  },
+  {
     "id": 198201419,
     "data": "2025-06-01T19:35:14.942391600Z",
     "gilde": [
@@ -272,6 +430,13 @@
         "ally": "TAXED",
         "kills": 16,
         "deaths": 2
+      },
+      {
+        "nome": "cocorrico",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 0
       },
       {
         "nome": "E L I T E",
@@ -286,6 +451,64 @@
     "ratti": 9,
     "fama": 1543955,
     "killsTotali": 18
+  },
+  {
+    "id": 198199823,
+    "data": "2025-06-01T19:31:46.655769600Z",
+    "gilde": [
+      {
+        "nome": "Golden Hammer",
+        "players": 20,
+        "ally": "NoAlliance",
+        "kills": 16,
+        "deaths": 1
+      },
+      {
+        "nome": "Treasure Hunt",
+        "players": 20,
+        "ally": "JOIN",
+        "kills": 2,
+        "deaths": 13
+      }
+    ],
+    "vincitore": "Golden Hammer",
+    "secondary": [],
+    "ratti": 4,
+    "fama": 2794021,
+    "killsTotali": 18
+  },
+  {
+    "id": 198198998,
+    "data": "2025-06-01T19:34:00.501559300Z",
+    "gilde": [
+      {
+        "nome": "ThunderCIap",
+        "players": 14,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 5
+      },
+      {
+        "nome": "INQUISITION",
+        "players": 15,
+        "ally": "ISSUE",
+        "kills": 6,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "INQUISITION",
+    "secondary": [
+      {
+        "nome": "W R A I T H",
+        "players": 1,
+        "ally": "ISSUE",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 5,
+    "fama": 2825810,
+    "killsTotali": 8
   },
   {
     "id": 198191515,
@@ -304,6 +527,13 @@
         "ally": "PRADA",
         "kills": 5,
         "deaths": 6
+      },
+      {
+        "nome": "VALORBORNE",
+        "players": 13,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 12
       }
     ],
     "vincitore": "Moravian Eagles",
@@ -319,6 +549,39 @@
     "ratti": 10,
     "fama": 4010141,
     "killsTotali": 33
+  },
+  {
+    "id": 198189188,
+    "data": "2025-06-01T19:12:16.713851900Z",
+    "gilde": [
+      {
+        "nome": "Argent Dawn",
+        "players": 15,
+        "ally": "HIT",
+        "kills": 0,
+        "deaths": 0
+      },
+      {
+        "nome": "Born To Kill",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Born To Kill",
+    "secondary": [
+      {
+        "nome": "REFAKERITOS",
+        "players": 4,
+        "ally": "HIT",
+        "kills": 4,
+        "deaths": 0
+      }
+    ],
+    "ratti": 6,
+    "fama": 1743177,
+    "killsTotali": 6
   },
   {
     "id": 198188509,
@@ -354,6 +617,31 @@
     "killsTotali": 9
   },
   {
+    "id": 198187783,
+    "data": "2025-06-01T19:10:11.872830300Z",
+    "gilde": [
+      {
+        "nome": "S e r e n i t y",
+        "players": 13,
+        "ally": "FD2D",
+        "kills": 0,
+        "deaths": 13
+      },
+      {
+        "nome": "ThunderCIap",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 10,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ThunderCIap",
+    "secondary": [],
+    "ratti": 6,
+    "fama": 2984095,
+    "killsTotali": 14
+  },
+  {
     "id": 198187134,
     "data": "2025-06-01T19:11:49.749080800Z",
     "gilde": [
@@ -386,6 +674,64 @@
     "killsTotali": 15
   },
   {
+    "id": 198186375,
+    "data": "2025-06-01T19:07:23.795346Z",
+    "gilde": [
+      {
+        "nome": "Argent Dawn",
+        "players": 15,
+        "ally": "HIT",
+        "kills": 2,
+        "deaths": 1
+      },
+      {
+        "nome": "Ruthless Reign",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 7
+      }
+    ],
+    "vincitore": "Argent Dawn",
+    "secondary": [
+      {
+        "nome": "REFAKERITOS",
+        "players": 4,
+        "ally": "HIT",
+        "kills": 5,
+        "deaths": 1
+      }
+    ],
+    "ratti": 1,
+    "fama": 2564371,
+    "killsTotali": 9
+  },
+  {
+    "id": 198185559,
+    "data": "2025-06-01T19:07:51.469839500Z",
+    "gilde": [
+      {
+        "nome": "Limit-Breakers Familia",
+        "players": 18,
+        "ally": "RISK",
+        "kills": 1,
+        "deaths": 12
+      },
+      {
+        "nome": "M I N D L E S S",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 14,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "M I N D L E S S",
+    "secondary": [],
+    "ratti": 4,
+    "fama": 2575355,
+    "killsTotali": 15
+  },
+  {
     "id": 198184665,
     "data": "2025-06-01T19:02:55.870942700Z",
     "gilde": [
@@ -409,5 +755,30 @@
     "ratti": 0,
     "fama": 7492837,
     "killsTotali": 5
+  },
+  {
+    "id": 198184435,
+    "data": "2025-06-01T19:03:24.605518600Z",
+    "gilde": [
+      {
+        "nome": "The Caravaneers",
+        "players": 12,
+        "ally": "VALOR",
+        "kills": 0,
+        "deaths": 12
+      },
+      {
+        "nome": "Taxi Crew",
+        "players": 14,
+        "ally": "NoAlliance",
+        "kills": 17,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Taxi Crew",
+    "secondary": [],
+    "ratti": 5,
+    "fama": 536373,
+    "killsTotali": 17
   }
 ]
