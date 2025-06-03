@@ -25,6 +25,8 @@ export function generaReportGilde(battaglie) {
 
     battaglie.forEach((battaglia) => {
 
+        if (battaglia.gilde.some(g => g.nome.includes('+'))) return;
+
         battaglia.gilde.forEach(gilda => {
             if(!gildaCount[gilda.nome]){
                 gildaCount[gilda.nome] = {numero_battaglie: 0, vittorie: 0};
@@ -43,18 +45,11 @@ function checkMinFame(significantGuilds){
     let totalDeathsTemp = 0;
 
     significantGuilds.forEach(([name, data]) => {
-        console.log("guild name : " + name);
-        console.log("deaths : " + data.deaths);
-        console.log("fame : " + data.killFame);
         totalFameTemp += data.killFame;
         totalDeathsTemp += data.deaths;
     });
 
-    console.log("totalDeaths : " + totalDeathsTemp);
-    console.log("totalFameTemp : " + totalFameTemp);
-
     if(totalDeathsTemp > 0){
-        console.log("Ratio : " + totalFameTemp/totalDeathsTemp);
         return totalFameTemp / totalDeathsTemp >= 150000;
     }
     else return false;
@@ -110,7 +105,7 @@ async function fetchBattles() {
     let stop = false;
     const data_temp = new Date().toISOString();
     //console.log("DATA TEMP: "+data_temp);
-    deleteBattle(); //PER CANCELLARE modificare id
+    //deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
         const now = Date.now();
