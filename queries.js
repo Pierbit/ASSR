@@ -2,7 +2,7 @@ import pool from './db.js';
 
 export async function deleteBattle(){
     //await pool.query('DELETE FROM dailybattles WHERE id=(SELECT id FROM dailybattles ORDER BY id DESC LIMIT 1)');
-    await pool.query('DELETE FROM dailybattles WHERE id=70');
+    await pool.query('DELETE FROM dailybattles WHERE id=72');
 }
 export async function insertDailyBattleJson(collected) {
     await pool.query('INSERT INTO dailybattles (report) VALUES ($1)', [collected]);
