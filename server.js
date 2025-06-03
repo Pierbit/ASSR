@@ -181,7 +181,7 @@ async function fetchBattles() {
 
                 let tempGuilds = Object.entries(guildMap);
                 const significantGuilds = Object.entries(guildMap)
-                    .filter(([_, data]) => data.count >= 11);
+                    .filter(([_, data]) => data.count >= 10);
 
                 if(significantGuilds.length === 1) {
                     tempGuilds = tempGuilds.filter(([key]) => key !== significantGuilds[0][0]);
@@ -197,7 +197,7 @@ async function fetchBattles() {
 
                 const secondaryGuildsMatched = Object.entries(guildMap)
                     .filter(([_, data]) =>
-                        data.count <= 10 &&
+                        data.count < 10 &&
                         data.alliance &&
                         data.alliance !== 'NoAlliance' &&
                         eligibleAlliances.has(data.alliance)
@@ -226,7 +226,7 @@ async function fetchBattles() {
                     allianceCounts[alliance] = (allianceCounts[alliance] || 0) + g.players;
                 });
 
-                const dominantAlly = Object.values(allianceCounts).some(count => count >= 25);
+                const dominantAlly = Object.values(allianceCounts).some(count => count > 25);
                 if (dominantAlly) return null;
 
                 const matchedNames = new Set(secondaryGuildsMatched.map(g => g.nome));

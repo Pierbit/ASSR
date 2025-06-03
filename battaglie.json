@@ -1,5 +1,30 @@
 [
   {
+    "id": 198717770,
+    "data": "2025-06-02T21:39:43.819122600Z",
+    "gilde": [
+      {
+        "nome": "Gatitos Furiosos",
+        "players": 14,
+        "ally": "NoAlliance",
+        "kills": 5,
+        "deaths": 0
+      },
+      {
+        "nome": "hehehaha",
+        "players": 11,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 7
+      }
+    ],
+    "vincitore": "Gatitos Furiosos",
+    "secondary": [],
+    "ratti": 2,
+    "fama": 1006036,
+    "killsTotali": 8
+  },
+  {
     "id": 198713524,
     "data": "2025-06-02T21:31:10.980269Z",
     "gilde": [
@@ -33,9 +58,122 @@
     "killsTotali": 15
   },
   {
+    "id": 198712352,
+    "data": "2025-06-02T21:24:27.588340500Z",
+    "gilde": [
+      {
+        "nome": "GLI STIRATI",
+        "players": 10,
+        "ally": "FISCO",
+        "kills": 1,
+        "deaths": 3
+      },
+      {
+        "nome": "Gatitos Furiosos",
+        "players": 13,
+        "ally": "NoAlliance",
+        "kills": 3,
+        "deaths": 0
+      },
+      {
+        "nome": "hehehaha",
+        "players": 12,
+        "ally": "NoAlliance",
+        "kills": 1,
+        "deaths": 2
+      }
+    ],
+    "vincitore": "Gatitos Furiosos",
+    "secondary": [
+      {
+        "nome": "Antrax Army",
+        "players": 1,
+        "ally": "FISCO",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 10,
+    "fama": 689874,
+    "killsTotali": 5
+  },
+  {
+    "id": 198711860,
+    "data": "2025-06-02T21:24:10.435642900Z",
+    "gilde": [
+      {
+        "nome": "W R A I T H",
+        "players": 18,
+        "ally": "ISSUE",
+        "kills": 3,
+        "deaths": 2
+      },
+      {
+        "nome": "Les Zouloux Veineux",
+        "players": 25,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 3
+      }
+    ],
+    "vincitore": "W R A I T H",
+    "secondary": [
+      {
+        "nome": "INQUISITION",
+        "players": 1,
+        "ally": "ISSUE",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 0,
+    "fama": 3452616,
+    "killsTotali": 5
+  },
+  {
+    "id": 198711483,
+    "data": "2025-06-02T21:27:22.337957100Z",
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 12,
+        "ally": "SWAP",
+        "kills": 1,
+        "deaths": 10
+      },
+      {
+        "nome": "ONE-TARGET",
+        "players": 23,
+        "ally": "POST",
+        "kills": 13,
+        "deaths": 7
+      }
+    ],
+    "vincitore": "ONE-TARGET",
+    "secondary": [
+      {
+        "nome": "Dismount",
+        "players": 2,
+        "ally": "POST",
+        "kills": 4,
+        "deaths": 0
+      }
+    ],
+    "ratti": 8,
+    "fama": 12598336,
+    "killsTotali": 24
+  },
+  {
     "id": 198706722,
     "data": "2025-06-02T21:17:15.584060700Z",
     "gilde": [
+      {
+        "nome": "Alcyon",
+        "players": 10,
+        "ally": "NGU",
+        "kills": 0,
+        "deaths": 10
+      },
       {
         "nome": "W R A I T H",
         "players": 19,
@@ -59,9 +197,16 @@
         "ally": "ISSUE",
         "kills": 0,
         "deaths": 0
+      },
+      {
+        "nome": "No Skills",
+        "players": 7,
+        "ally": "NGU",
+        "kills": 0,
+        "deaths": 7
       }
     ],
-    "ratti": 17,
+    "ratti": 10,
     "fama": 7325056,
     "killsTotali": 25
   },
@@ -97,6 +242,31 @@
     "ratti": 7,
     "fama": 2414826,
     "killsTotali": 16
+  },
+  {
+    "id": 198702866,
+    "data": "2025-06-02T21:04:28.262567300Z",
+    "gilde": [
+      {
+        "nome": "Gatitos Furiosos",
+        "players": 13,
+        "ally": "NoAlliance",
+        "kills": 6,
+        "deaths": 0
+      },
+      {
+        "nome": "hehehaha",
+        "players": 10,
+        "ally": "NoAlliance",
+        "kills": 2,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Gatitos Furiosos",
+    "secondary": [],
+    "ratti": 17,
+    "fama": 721278,
+    "killsTotali": 8
   },
   {
     "id": 198702091,
@@ -144,6 +314,81 @@
     "ratti": 12,
     "fama": 3166996,
     "killsTotali": 13
+  },
+  {
+    "id": 198700884,
+    "data": "2025-06-02T21:01:29.333496900Z",
+    "gilde": [
+      {
+        "nome": "NO META",
+        "players": 12,
+        "ally": "SWAP",
+        "kills": 7,
+        "deaths": 0
+      },
+      {
+        "nome": "S e r e n i t y",
+        "players": 10,
+        "ally": "FD2D",
+        "kills": 0,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "NO META",
+    "secondary": [],
+    "ratti": 22,
+    "fama": 5505195,
+    "killsTotali": 14
+  },
+  {
+    "id": 198700451,
+    "data": "2025-06-02T20:59:30.314078900Z",
+    "gilde": [
+      {
+        "nome": "Eshfold",
+        "players": 14,
+        "ally": "200IQ",
+        "kills": 1,
+        "deaths": 5
+      },
+      {
+        "nome": "Dementia",
+        "players": 10,
+        "ally": "FOU",
+        "kills": 6,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "Dementia",
+    "secondary": [],
+    "ratti": 11,
+    "fama": 1073144,
+    "killsTotali": 7
+  },
+  {
+    "id": 198700391,
+    "data": "2025-06-02T20:59:30.623162100Z",
+    "gilde": [
+      {
+        "nome": "C I N G H I A L E",
+        "players": 18,
+        "ally": "CCd",
+        "kills": 10,
+        "deaths": 0
+      },
+      {
+        "nome": "Psycha Surfing",
+        "players": 10,
+        "ally": "1v9",
+        "kills": 0,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "C I N G H I A L E",
+    "secondary": [],
+    "ratti": 11,
+    "fama": 2201347,
+    "killsTotali": 10
   },
   {
     "id": 198697170,
@@ -194,6 +439,64 @@
     "ratti": 1,
     "fama": 847233,
     "killsTotali": 11
+  },
+  {
+    "id": 198694377,
+    "data": "2025-06-02T20:49:56.933300800Z",
+    "gilde": [
+      {
+        "nome": "Les Zouloux Veineux",
+        "players": 25,
+        "ally": "NoAlliance",
+        "kills": 25,
+        "deaths": 0
+      },
+      {
+        "nome": "Nation of Elites",
+        "players": 11,
+        "ally": "VLR",
+        "kills": 0,
+        "deaths": 11
+      }
+    ],
+    "vincitore": "Les Zouloux Veineux",
+    "secondary": [],
+    "ratti": 14,
+    "fama": 7081706,
+    "killsTotali": 25
+  },
+  {
+    "id": 198693841,
+    "data": "2025-06-02T20:47:15.646938100Z",
+    "gilde": [
+      {
+        "nome": "W R A I T H",
+        "players": 24,
+        "ally": "ISSUE",
+        "kills": 11,
+        "deaths": 1
+      },
+      {
+        "nome": "C I N G H I A L E",
+        "players": 11,
+        "ally": "CCd",
+        "kills": 1,
+        "deaths": 10
+      }
+    ],
+    "vincitore": "W R A I T H",
+    "secondary": [
+      {
+        "nome": "INQUISITION",
+        "players": 1,
+        "ally": "ISSUE",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 1,
+    "fama": 3186477,
+    "killsTotali": 12
   },
   {
     "id": 198688422,
@@ -269,6 +572,122 @@
     "ratti": 21,
     "fama": 1410029,
     "killsTotali": 24
+  },
+  {
+    "id": 198682255,
+    "data": "2025-06-02T20:34:58.998614700Z",
+    "gilde": [
+      {
+        "nome": "Golden Hammer",
+        "players": 21,
+        "ally": "NoAlliance",
+        "kills": 20,
+        "deaths": 0
+      },
+      {
+        "nome": "TEMPLARS_ORDER",
+        "players": 10,
+        "ally": "TOR",
+        "kills": 0,
+        "deaths": 20
+      }
+    ],
+    "vincitore": "Golden Hammer",
+    "secondary": [],
+    "ratti": 10,
+    "fama": 4080,
+    "killsTotali": 20
+  },
+  {
+    "id": 198675101,
+    "data": "2025-06-02T20:17:03.248717100Z",
+    "gilde": [
+      {
+        "nome": "AO MMM",
+        "players": 10,
+        "ally": "BANK",
+        "kills": 8,
+        "deaths": 5
+      },
+      {
+        "nome": "Utopia",
+        "players": 12,
+        "ally": "FUN",
+        "kills": 4,
+        "deaths": 1
+      }
+    ],
+    "vincitore": "AO MMM",
+    "secondary": [
+      {
+        "nome": "AO MMM v2",
+        "players": 1,
+        "ally": "BANK",
+        "kills": 0,
+        "deaths": 0
+      }
+    ],
+    "ratti": 29,
+    "fama": 1050695,
+    "killsTotali": 19
+  },
+  {
+    "id": 198669183,
+    "data": "2025-06-02T19:59:07.434108400Z",
+    "gilde": [
+      {
+        "nome": "ExE",
+        "players": 10,
+        "ally": "DAT",
+        "kills": 0,
+        "deaths": 10
+      },
+      {
+        "nome": "Star Linx",
+        "players": 16,
+        "ally": "NoAlliance",
+        "kills": 12,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "Star Linx",
+    "secondary": [
+      {
+        "nome": "junkie monkey",
+        "players": 1,
+        "ally": "DAT",
+        "kills": 0,
+        "deaths": 1
+      }
+    ],
+    "ratti": 11,
+    "fama": 632786,
+    "killsTotali": 12
+  },
+  {
+    "id": 198667018,
+    "data": "2025-06-02T19:54:30.230837100Z",
+    "gilde": [
+      {
+        "nome": "The Caravaneers",
+        "players": 10,
+        "ally": "VALOR",
+        "kills": 0,
+        "deaths": 10
+      },
+      {
+        "nome": "ROOT",
+        "players": 19,
+        "ally": "NoAlliance",
+        "kills": 12,
+        "deaths": 0
+      }
+    ],
+    "vincitore": "ROOT",
+    "secondary": [],
+    "ratti": 12,
+    "fama": 319572,
+    "killsTotali": 12
   },
   {
     "id": 198653241,
