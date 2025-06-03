@@ -37,6 +37,30 @@ export function generaReportGilde(battaglie) {
     return gildaCount;
 }
 
+function checkMinFame(significantGuilds){
+
+    let totalFameTemp = 0;
+    let totalDeathsTemp = 0;
+
+    significantGuilds.forEach(([name, data]) => {
+        console.log("guild name : " + name);
+        console.log("deaths : " + data.deaths);
+        console.log("fame : " + data.killFame);
+        totalFameTemp += data.killFame;
+        totalDeathsTemp += data.deaths;
+    });
+
+    console.log("totalDeaths : " + totalDeathsTemp);
+    console.log("totalFameTemp : " + totalFameTemp);
+
+    if(totalDeathsTemp > 0){
+        console.log("Ratio : " + totalFameTemp/totalDeathsTemp);
+        return totalFameTemp / totalDeathsTemp >= 150000;
+    }
+    else return false;
+
+}
+
 function mergeAllies(significantGuilds) {
     const allyMap = {};
 
@@ -86,7 +110,7 @@ async function fetchBattles() {
     let stop = false;
     const data_temp = new Date().toISOString();
     //console.log("DATA TEMP: "+data_temp);
-    //deleteBattle(); //PER CANCELLARE modificare id
+    deleteBattle(); //PER CANCELLARE modificare id
 
     while (offset < 3000) {
         const now = Date.now();
@@ -171,13 +195,16 @@ async function fetchBattles() {
                     const alliance = player.allianceName || 'NoAlliance';
 
                     if (!guildMap[guild]) {
-                        guildMap[guild] = {count: 0, alliance, kills: 0, deaths: 0};
+                        guildMap[guild] = {count: 0, alliance, kills: 0, deaths: 0, killFame: 0};
                     }
                     guildMap[guild].kills += kills;
                     guildMap[guild].deaths += deaths;
                     guildMap[guild].count++;
                 });
 
+                Object.values(battle.guilds).forEach(guild => {
+                    guildMap[guild.name].killFame = guild.killFame;
+                })
 
                 let tempGuilds = Object.entries(guildMap);
                 const significantGuilds = Object.entries(guildMap)
@@ -189,6 +216,8 @@ async function fetchBattles() {
                 }else if(significantGuilds.length < 1) {
                     return null;
                 }
+
+                if(!checkMinFame(significantGuilds)) return null;
 
                 const eligibleAlliances = new Set(
                     significantGuilds
